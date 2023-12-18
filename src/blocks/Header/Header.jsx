@@ -3,12 +3,26 @@ import LogoSVG from "../../svg/logo.inline.svg?url"
 import { colors } from "../../tokens.stylex.js";
 import { globalStyle } from "../../index.stylex.js";
 
+const DESKTOP_XL = "@media screen and (min-width: 1920px)";
+const DESKTOP_MD = "@media screen and (min-width: 1440px) and (max-width: 1919px)";
+const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)"
+
 const styles = stylex.create({
     header: {
         width: "100%",
         backgroundColor: colors.background,
-        padding: "30px 0",
-        position: "relative"
+        
+        position: "relative",
+        [DESKTOP_XL] : {
+            padding: "30px 0",
+        },
+        [DESKTOP_MD] : {
+            padding: "20px 0",
+        },
+        [DESKTOP_S] : {
+            padding: "16px 0",
+        }
+
     },
     content: {
         display: "flex",

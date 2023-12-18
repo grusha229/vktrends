@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors } from "../../tokens.stylex.js";
+import { colors, paddings} from "../../tokens.stylex.js";
 import { globalStyle } from "../../index.stylex.js";
 import SVG_PATTERN from "../../svg/star.inline.svg?url"
 
@@ -12,18 +12,29 @@ const TEXTS = [
 ]
 
 
+const DESKTOP_XL = "@media screen and (min-width: 1920px)";
+const DESKTOP_MD = "@media screen and (min-width: 1440px) and (max-width: 1919px)";
+const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)"
+
 const TrendItemStyles = stylex.create({
     block: {
         width: "100%",
         backgroundColor: colors.background,
         position: "relative",
         overflow: "hidden",
-        paddingBottom: "80px"
+        [DESKTOP_XL] : {
+            paddingBottom: paddings.padding_xl,
+        },
+        [DESKTOP_MD] : {
+            paddingBottom: paddings.padding_md,
+        },
+        [DESKTOP_S] : {
+            paddingBottom: paddings.padding_sm,
+        }
     },
     content: {
         display: "flex",
         flexDirection: "column",
-        minHeight: "1000px",
         zIndex: "2",
         position: "relative",
     },
@@ -33,12 +44,27 @@ const TrendItemStyles = stylex.create({
         leadingTrim: "both",
         textEdge: "cap",
         fontFamily: "VK Sans Display Expanded",
-        fontSize: "54px",
         fontStyle: "normal",
-        fontWeight: "600",
-        lineHeight: "114%",
-        letterSpacing: "0.54px",
-        textTransform: "uppercase"
+        textTransform: "uppercase",
+
+        [DESKTOP_XL] : {
+            fontWeight: "600",
+            lineHeight: "114%",
+            letterSpacing: "0.54px",
+            fontSize: "54px",
+        },
+        [DESKTOP_MD] : {
+            fontWeight: "600",
+            lineHeight: "115%",
+            letterSpacing: "0.42px",
+            fontSize: "42px",
+        },
+        [DESKTOP_S] : {
+            fontWeight: "600",
+            lineHeight: "115%",
+            letterSpacing: "0.28px",
+            fontSize: "28px",
+        },
     },
     dynamicColor: (value) => ({
         color: value,
@@ -49,6 +75,24 @@ const TrendItemStyles = stylex.create({
         top: "160px",
         left: "220px",
         zIndex: "1",
+
+        [DESKTOP_XL] : {
+            width: "1235px",
+            top: "160px",
+            left: "230px",
+        },
+        [DESKTOP_MD] : {
+            width: "926px",
+            top: "150px",
+            left: "50%",
+            transform: "translate(-50%,0)"
+        },
+        [DESKTOP_S] : {
+            width: "660px",
+            top: "150px",
+            left: "50%",
+            transform: "translate(-50%,0)"
+        }
     },
     person: {
         display: 'flex',
@@ -56,51 +100,124 @@ const TrendItemStyles = stylex.create({
     },
     personLayout: {
         marginTop: "90px",
-        paddingLeft: "620px",
         ':after' :{
             content: '',
             backgroundColor: colors.title,
             height: "9px",
             display: "block",
             marginTop: "-5px"
+        },
+        [DESKTOP_XL] : {
+            paddingLeft: "656px",
+        },
+        [DESKTOP_MD] : {
+            paddingLeft: "492px",
+        },
+        [DESKTOP_S] : {
+            paddingLeft: "350px",
         }
     },
     person__photo: {
-        width: "440px",
+        
+
+        [DESKTOP_XL] : {
+            width: "440px",
+        },
+        [DESKTOP_MD] : {
+            width: "330px",
+        },
+        [DESKTOP_S] : {
+            width: "235px",
+        }
     },
     person__info: {
-        paddingLeft: "96px",
-        paddingTop: "237px",
+
         display: 'flex',
-        gap: "20px",
         flexDirection: "column",
-        justifyContent: "center"
+        justifyContent: "center",
+
+        [DESKTOP_XL] : {
+            paddingLeft: "96px",
+            paddingTop: "237px",
+            gap: "20px",
+        },
+        [DESKTOP_MD] : {
+            paddingLeft: "42px",
+            gap: "15px",
+        },
+        [DESKTOP_S] : {
+            paddingLeft: "20px",
+            gap: "10px",
+        }
     },
     person__info_name: {
-        fontSize: "28px",
         fontStyle: "normal",
         fontWeight: "600",
-        lineHeight: "140%",/* 39.2px */
-        textTransform: "uppercase"
+        textTransform: "uppercase",
+
+        [DESKTOP_XL] : {
+            fontSize: "28px",
+            lineHeight: "140%",/* 39.2px */
+        },
+        [DESKTOP_MD] : {
+            fontSize: "22px",
+            lineHeight: "140%",
+        },
+        [DESKTOP_S] : {
+            fontSize: "16px",
+            lineHeight: "140%",
+        }
     },
     person__info_post: {
-        width: "448px",
+        
 
         fontFamily: "VK Sans Text",
 
-        fontSize: "24px",
         fontStyle: "normal",
         fontWeight: "400",
         lineHeight: "140%",
+
+        [DESKTOP_XL] : {
+            fontSize: "24px",
+            width: "448px",
+        },
+        [DESKTOP_MD] : {
+            fontSize: "18px",
+            width: "330px"
+        },
+        [DESKTOP_S] : {
+            fontSize: "14px",
+            width: "240px"
+        }
     },
     dataLayout: {
         paddingLeft: "620px",
+
+        [DESKTOP_XL] : {
+            paddingLeft: "656px",
+        },
+        [DESKTOP_MD] : {
+            paddingLeft: "492px",
+        },
+        [DESKTOP_S] : {
+            paddingLeft: "350px",
+        }
     },
     data: {
         background: colors.background,
-        padding: "48px 30px 60px 30px",
-        position: "relative"
+        position: "relative",
+
+        [DESKTOP_XL] : {
+            padding: "40px",
+        },
+        [DESKTOP_MD] : {
+            padding: "30px",
+        },
+        [DESKTOP_S] : {
+            padding: "30px",
+        },
     },
+
     data__trend: {
         position: "absolute",
         width: "430px",
@@ -108,23 +225,46 @@ const TrendItemStyles = stylex.create({
         left: "-460px",
         textAlign: "right",
         color: colors.title,
-        fontSize: "30px",
+        
         fontStyle: "normal",
         fontWeight: "600",
-        lineHeight: "45px" ,/* 150% */
+        
         letterSpacing: "0.3px",
-        textTransform: "uppercase"
+        textTransform: "uppercase", 
+        [DESKTOP_XL] : {
+            lineHeight: "50px" ,/* 150% */
+            fontSize: "60px",
+        },
+        [DESKTOP_MD] : {
+            lineHeight: "45px" ,/* 150% */
+            fontSize: "36px",
+        },
+        [DESKTOP_S] : {
+            lineHeight: "32px" ,
+            fontSize: "26px",
+        },
     },
     data__grid: {
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
-        gap: "60px",
 
         fontFamily: "VK Sans Text",
-        fontSize: "24px",
+
         fontStyle: "normal",
         fontWeight: "300",
         lineHeight: "140%",
+        [DESKTOP_XL] : {
+            gap: "60px",
+            fontSize: "24px",
+        },
+        [DESKTOP_MD] : {
+            gap: "40px",
+            fontSize: "18px",
+        },
+        [DESKTOP_S] : {
+            gap: "30px",
+            fontSize: "14px",
+        },
     }
 })
   

@@ -16,5 +16,12 @@ export const colors = stylex.defineVars({
   lightBlue: "#3AFFFF",
   pink: "#FF2FB8",
   orange: "FF9111",
-  red: "#FF1F00"
+  red: "#FF1F00",
 });
+
+export const paddings = stylex.defineVars({
+  padding_xl: "290px",
+  padding_md: "220px",
+  padding_sm: "150px",
+  padding_s: "100px",
+})

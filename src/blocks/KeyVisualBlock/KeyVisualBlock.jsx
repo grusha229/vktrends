@@ -1,17 +1,32 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors } from "../../tokens.stylex.js";
+import { colors, paddings } from "../../tokens.stylex.js";
 import { globalStyle } from "../../index.stylex.js";
 import SVG_PATTERN from "../../svg/pattern_kv.inline.svg?url"
 import { useEffect } from "react";
 
+const DESKTOP_XL = "@media screen and (min-width: 1920px)";
+const DESKTOP_MD = "@media screen and (min-width: 1440px) and (max-width: 1919px)";
+const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)"
+// const mobile_md = "@media screen and (max-width: 375px)"
 
 const styles = stylex.create({
     kvblock: {
         width: "100%",
         backgroundColor: colors.background,
         position: "relative",
-        paddingTop: "210px",
-        overflow: "hidden"
+        overflow: "hidden",
+        [DESKTOP_XL] : {
+            paddingTop: "210px",
+            paddingBottom: paddings.padding_xl,
+        },
+        [DESKTOP_MD] : {
+            paddingTop: "160px",
+            paddingBottom: paddings.padding_md,
+        },
+        [DESKTOP_S] : {
+            paddingTop: "110px",
+            paddingBottom: paddings.padding_sm,
+        }
     },
     content: {
         position: 'relative',
@@ -24,65 +39,166 @@ const styles = stylex.create({
         leadingTrim: "both",
         textEdge: "cap",
         fontFamily: "VK Sans Display Expanded",
-        fontSize: "280px",
-        fontStyle: "normal",
-        fontWeight: "600",
-        lineHeight: "110%",
-        letterSpacing: "2.8px",
         textTransform: "uppercase",
         zIndex: "3",
+        [DESKTOP_XL] : {
+            fontSize: "280px",
+            fontStyle: "normal",
+            fontWeight: "600",
+            lineHeight: "100%",
+            letterSpacing: "2.8px",
+        },
+        [DESKTOP_MD] : {
+            fontSize: "210px",
+            fontStyle: "normal",
+            fontWeight: "600",
+            lineHeight: "100%",
+            letterSpacing: "2.1px",
+        },
+        [DESKTOP_S] : {
+            fontSize: "150px",
+            fontStyle: "normal",
+            fontWeight: "600",
+            lineHeight: "110%",
+            letterSpacing: "1.5px",
+        }
     },
     colored : {
         color: colors.title
     },
     description: {
-        paddingLeft: "433px",
+        
         zIndex: "2",
+        [DESKTOP_XL] : {
+            marginTop: "140px",
+            paddingLeft: "430px",
+        },
+        [DESKTOP_MD] : {
+            marginTop: "100px",
+            paddingLeft: "320px",
+        },
+        [DESKTOP_S] : {
+            marginTop: "70px",
+            paddingLeft: "220px",
+        }
     },
     subtitle: {
-        marginTop: "138px",
         color: colors.text,
-        fontSize: "24px",
         fontStyle: "normal",
         fontWeight: "500",
-        lineHeight: "150%"
+        
+        [DESKTOP_XL] : {
+            fontSize: "24px",
+            lineHeight: "150%",
+        },
+        [DESKTOP_MD] : {
+            fontSize: "18px",
+            lineHeight: "150%",
+        },
+        [DESKTOP_S] : {
+            fontSize: "14px",
+            lineHeight: "150%",
+        }
     },
     info: {
-        marginTop: "260px",
+        
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
-        columnGap: "178px",
-        rowGap: "138px"
+
+        [DESKTOP_XL] : {
+            marginTop: "260px",
+            columnGap: "178px",
+            rowGap: "138px",
+        },
+        [DESKTOP_MD] : {
+            marginTop: "180px",
+            columnGap: "150px",
+            rowGap: "120px",
+        },
+        [DESKTOP_S] : {
+            marginTop: "120px",
+            columnGap: "102px",
+            rowGap: "80px",
+        }
     },
     info__title: {
         color: colors.title,
-        fontSize: "90px",
         fontStyle: "normal",
         fontWeight: "600",
-        lineHeight: "110%", /* 99px */
-        letterSpacing: "0.9px",
+
         textTransform: "uppercase",
         zIndex: "1",
-        position: "relative"
+        position: "relative",
+
+        [DESKTOP_XL] : {
+            fontSize: "90px",
+
+            lineHeight: "110%", /* 99px */
+            letterSpacing: "0.9px",
+        },
+        [DESKTOP_MD] : {
+            fontSize: "68px",
+            lineHeight: "110%", /* 99px */
+            letterSpacing: "0.68px",
+        },
+        [DESKTOP_S] : {
+            fontSize: "48px",
+            lineHeight: "110%", /* 99px */
+            letterSpacing: "0.48px",
+        },
     },
     info__description: {
         color: colors.text,
-        fontSize: "24px",
+
         fontStyle: "normal",
         fontWeight: "500",
-        lineHeight: "150%",
-        padding: "20px 10px 32px 10px",
+  
         background: colors.background,
-        marginTop: "-29px",
         zIndex: "999",
         position: "relative",
+        [DESKTOP_XL] : {
+            paddingTop: "20px",
+            marginTop: "-25px",
+
+            fontSize: "24px",
+            lineHeight: "150%",
+
+        },
+        [DESKTOP_MD] : {
+            paddingTop: "16px",
+            marginTop: "-20px",
+
+            fontSize: "18px",
+            lineHeight: "150%",
+        },
+        [DESKTOP_S] : {
+            paddingTop: "10px",
+            marginTop: "-14px",
+
+            fontSize: "14px",
+            lineHeight: "150%",
+        },
     },
     bg: {
         position: "absolute",
-        top: "635px",
-        right: "-700px",
         transform: "rotate(29.708deg)",
         zIndex: "1",
+
+        [DESKTOP_XL] : {
+            top: "500px",
+            right: "-775px",
+
+        },
+        [DESKTOP_MD] : {
+            top: "330px",
+            right: "-700px",
+            width: "1350px"
+        },
+        [DESKTOP_S] : {
+            top: "290px",
+            right: "-320px",
+            width: "800px"
+        },
     }
 })
 
@@ -101,8 +217,7 @@ export default function KeyVisualBlock (props) {
                     <div {...stylex.props(styles.description)}>
                         <div {...stylex.props(styles.subtitle)}>
                             <p>
-                                Не следует, однако, забывать о том, что сложившаяся структура <br/> организации создаёт предпосылки качественно новых шагов<br/>для позиций,
-                                занимаемых участниками в отношении поставленных задач?
+                            Не следует, однако, забывать о том, что сложившаяся структура организации создаёт предпосылки качественно новых шагов для позиций, занимаемых участниками в отношении поставленных задач?
                             </p>
                         </div>
                         <div {...stylex.props(styles.info)}>

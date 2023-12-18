@@ -1,16 +1,17 @@
 import * as stylex from "@stylexjs/stylex";
-import LogoSVG from "../../svg/logo.inline.svg?url"
 import { colors } from "../../tokens.stylex.js";
-import { globalStyle } from "../../index.stylex.js";
+
+const DESKTOP_XL = "@media screen and (min-width: 1920px)";
+const DESKTOP_MD = "@media screen and (min-width: 1440px) and (max-width: 1919px)";
+const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)"
+// const mobile_md = "@media screen and (max-width: 375px)"
 
 const FooterStyles = stylex.create({
     footer: {
         width: "100%",
-        marginTop: "225px", 
         backgroundColor: colors.title,
         position: "relative",
         display: "flex",
-        padding: "100px 0",
         justifyContent: "center"
     },
     button: {
@@ -23,14 +24,28 @@ const FooterStyles = stylex.create({
         textDecoration: "none",
         
         textEdge: "cap",
-        fontSize: "90px",
+        
         fontStyle: "normal",
         fontWeight: "600",
-        lineHeight: "75px",
+        justifyContent: "center",
         letterSpacing: "0.9px",
         textTransform: "uppercase",
+        width: "100%",
 
-        width: "796px",
+        
+        [DESKTOP_XL] : {
+            fontSize: "90px",
+            lineHeight: "75px",
+            padding: "100px"
+        },
+        [DESKTOP_MD] : {
+            fontSize: "68px",
+            padding: "70px"
+        },
+        [DESKTOP_S] : {
+            fontSize: "48px",
+            padding: "48px"
+        }
     },
 })
 

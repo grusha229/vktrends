@@ -1,7 +1,13 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors } from "../../tokens.stylex.js";
+import { colors, paddings } from "../../tokens.stylex.js";
 import { globalStyle } from "../../index.stylex.js";
 import SVG_PATTERN from "../../svg/pattern_kv.inline.svg?url"
+
+
+const DESKTOP_XL = "@media screen and (min-width: 1920px)";
+const DESKTOP_MD = "@media screen and (min-width: 1440px) and (max-width: 1919px)";
+const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)"
+// const mobile_md = "@media screen and (max-width: 375px)"
 
 
 const styles = stylex.create({
@@ -9,33 +15,55 @@ const styles = stylex.create({
         width: "100%",
         backgroundColor: colors.background,
         position: "relative",
-        paddingTop: "210px",
         overflow: "hidden",
-        paddingBottom: "210px",
+        [DESKTOP_XL] : {
+            paddingBottom: paddings.padding_xl,
+        },
+        [DESKTOP_MD] : {
+            paddingBottom: paddings.padding_md,
+        },
+        [DESKTOP_S] : {
+            paddingBottom: paddings.padding_sm,
+        },
     },
     content: {
         position: 'relative',
         display: "flex",
         flexDirection: "column",
-        height: "2050px"
+        // alignItems: "center"
+        alignItems: "flex-start",
+        // height: "2050px"
     },
     theme : {
-        position: "absolute",
+        // position: "absolute",
         cursor: "pointer",
+        textAlign: "center"
     },
     theme__title : {
         textAlign: "center",
         leadingTrim: "both",
 
         textEdge: "cap",
-        fontSize: "90px",
+
         fontStyle: "normal",
         fontWeight: "600",
         letterSpacing: "0.9px",
         textTransform: "uppercase",
         lineHeight: "110%", /* 99px */
 
-        pointerEvents: "none"
+        pointerEvents: "none",
+        display : "inline",
+        [DESKTOP_XL]: {
+            fontSize: "90px",
+        },
+        [DESKTOP_MD]: {
+            fontSize: "68px",
+            letterSpacing: "0.68px"
+        },
+        [DESKTOP_S]: {
+            fontSize: "48px",
+            letterSpacing: "0.48px"
+        }
     },
     theme__descr : {
         position: "relative",
@@ -47,72 +75,100 @@ const styles = stylex.create({
     },
     first: {
         transform: "rotate(-3deg)",
-        top: "27px",
-        left: "340px",
-        color: "#FF3A75"
+        // top: "27px",
+        // left: "340px",
+        color: colors.title,
+        [DESKTOP_XL]: {
+            height: "128px",
+            paddingLeft: "424px",
+        },
+        [DESKTOP_MD]: {
+            height: "96px",
+            paddingLeft: "320px",
+        },
+        [DESKTOP_S]: {
+            height: "71px",
+            paddingLeft: "220px",
+        }
     },
     second: {
         transform: "rotate(3deg)",
-        top: "185px",
-        left: "928px",
-        color: "#FFEB3A",
-        width: "796px"
+        color: colors.green,
+        alignSelf: "flex-end",
+        [DESKTOP_XL]: {
+            height: "138px",
+            paddingRight: "424px" ,
+        },
+        [DESKTOP_MD]: {
+            height: "104px",
+            paddingRight: "320px" ,
+        },
+        [DESKTOP_S]: {
+            height: "74px",
+            paddingRight: "220px" ,
+        }
     },
     third: {
         transform: "rotate(-3deg)",
-        top: "306px",
-        left: "170px",
-        color: "#FFF",
-        width: "818px"
+        color: colors.white,
+        [DESKTOP_XL]: {
+            height: "142px",
+            paddingLeft: "260px",
+        },
+        [DESKTOP_MD]: {
+            height: "128px",
+            paddingLeft: "195px",
+        },
+        [DESKTOP_S]: {
+            height: "74px",
+            paddingLeft: "140px",
+        }
     },
     fourth: {
         transform: "rotate(3deg)",
-        top: "420px",
-        left: "720px",
-        color: "#C03AFF",
-        width: "1013px"
+        
+        color: colors.purple,
+        alignSelf: "flex-end",
+        [DESKTOP_XL]: {
+            height: "150px",
+            paddingRight: "260px" ,
+        },
+        [DESKTOP_MD]: {
+            height: "112px",
+            paddingRight: "195px" ,
+        },
+        [DESKTOP_S]: {
+            height: "80px",
+            paddingRight: "140px" ,
+        }
     },
     fifth: {
         transform: "rotate(-3deg)",
-        top: "700px",
-        left: "290px",
-        color: "#2ADE26",
-        width: "825px"
+        color: colors.yellow,
+        alignSelf: "center",
+        [DESKTOP_XL]: {
+            height: "254px",
+        },
+        [DESKTOP_MD]: {
+            height: "190px"
+        },
+        [DESKTOP_S]: {
+            height: "135px"
+        }
     },
     sixth: {
         transform: "rotate(3deg)",
-        top: "900px",
-        left: "907px",
-        color: "#3A71FF",
-        width: "616px"
-    },
-    seventh: {
-        transform: "rotate(-3deg)",
-        top: "1095px",
-        left: "65px",
-        color: "#3AFFFF",
-        width: "1780px"
-    },
-    eighth: {
-        transform: "rotate(3deg)",
-        top: "1300px",
-        left: "300px",
-        color: "#FF2FB8",
-        width: "1780px"
-    },
-    ninth: {
-        transform: "rotate(-3deg)",
-        top: "1600px",
-        left: "-90px",
-        color: "#FF9111",
-        width: "1780px"
-    },
-    tenth: {
-        transform: "rotate(3deg)",
-        top: "1855px",
-        left: "65px",
-        color: "#FF1F00",
-        width: "1780px"
+        color: colors.lightBlue,
+        alignSelf: "center",
+        [DESKTOP_XL]: {
+            height: "162px",
+        },
+        [DESKTOP_MD]: {
+            height: "120px"
+        },
+        [DESKTOP_S]: {
+            height: "86px"
+        }
     }
 })
 
@@ -143,31 +199,15 @@ export default function TrendsTitleList () {
                         {/* <p {...stylex.props(styles.theme__descr)}>Прародителем текста-рыбы является известный «Lorem Ipsum» </p> */}
                     </div>
                     <div data-id={"fourth"} {...stylex.props(styles.theme, styles.fourth)} onClick={handleClick}>
-                        <p {...stylex.props(styles.theme__title)}>Работа с&nbsp;комьюнити</p>
+                        <p {...stylex.props(styles.theme__title)}>Тредвотчинг</p>
                         {/* <p {...stylex.props(styles.theme__descr)}>Прародителем текста-рыбы является известный «Lorem Ipsum» </p> */}
                     </div>
                     <div data-id={"fifth"} {...stylex.props(styles.theme, styles.fifth)} onClick={handleClick}>
-                        <p {...stylex.props(styles.theme__title)}>Аналитика</p>
+                        <p {...stylex.props(styles.theme__title)}>Сторителлинг и&nbsp;креатив </p>
                         {/* <p {...stylex.props(styles.theme__descr)}>Прародителем текста-рыбы является известный «Lorem Ipsum» </p> */}
                     </div>
                     <div data-id={"sixth"} {...stylex.props(styles.theme, styles.sixth)} onClick={handleClick}>
-                        <p {...stylex.props(styles.theme__title)}>Контент</p>
-                        {/* <p {...stylex.props(styles.theme__descr)}>Прародителем текста-рыбы является известный «Lorem Ipsum» </p> */}
-                    </div>
-                    <div data-id={"seventh"} {...stylex.props(styles.theme, styles.seventh)} onClick={handleClick}>
-                        <p {...stylex.props(styles.theme__title)}>Платный контент</p>
-                        {/* <p {...stylex.props(styles.theme__descr)}>Прародителем текста-рыбы является известный «Lorem Ipsum» </p> */}
-                    </div>
-                    <div data-id={"eighth"} {...stylex.props(styles.theme, styles.eighth)} onClick={handleClick}>
-                        <p {...stylex.props(styles.theme__title)}>Сторителлинг в&nbsp;бизнесе</p>
-                        {/* <p {...stylex.props(styles.theme__descr)}>Прародителем текста-рыбы является известный «Lorem Ipsum» </p> */}
-                    </div>
-                    <div data-id={"ninth"} {...stylex.props(styles.theme, styles.ninth)} onClick={handleClick}>
                         <p {...stylex.props(styles.theme__title)}>Короткие видео</p>
-                        {/* <p {...stylex.props(styles.theme__descr)}>Прародителем текста-рыбы является известный «Lorem Ipsum» </p> */}
-                    </div>
-                    <div data-id={"tenth"} {...stylex.props(styles.theme, styles.tenth)} onClick={handleClick}>
-                        <p {...stylex.props(styles.theme__title)}>Развитие сообщества</p>
                         {/* <p {...stylex.props(styles.theme__descr)}>Прародителем текста-рыбы является известный «Lorem Ipsum» </p> */}
                     </div>
                 </div>
