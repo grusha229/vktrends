@@ -88,7 +88,7 @@ body {
   font-family: "VK Sans Display Expanded";
   src: url(./fonts/VK_Sans_Display_Expanded_Regular.eot);
   src: 
-  		url(./fonts/VK_Sans_Display_Expanded_Regular.woff) format('woff2'),
+  		url(./fonts/VK_Sans_Display_Expanded_Regular.woff2) format('woff2'),
 		url(./fonts/VK_Sans_Display_Expanded_Regular.eot?#iefix) format('embedded-opentype'),
 		url(./fonts/VK_Sans_Display_Expanded_Regular.woff) format('woff'),
 		url(./fonts/VK_Sans_Display_Expanded_Regular.ttf) format('truetype');
@@ -99,12 +99,12 @@ body {
 
 @font-face {
 	font-family: 'VK Sans Text';
-	src: url(./fonts/VK\ Sans\ Text\ Regular.eot);
+	src: url(./fonts/VK_Sans_Text_Regular.eot);
 	src:
-		url(./fonts/VK\ Sans\ Text\ Regular.woff2) format('woff2'),
-		url(./fonts/VK\ Sans\ Text\ Regular.eot?#iefix) format('embedded-opentype'),
-		url(./fonts/VK\ Sans\ Text\ Regular.woff) format('woff'),
-		url(./fonts/VK\ Sans\ Text\ Regular.ttf) format('truetype');
+		url(./fonts/VK_Sans_Text_Regular.woff2) format('woff2'),
+		url(./fonts/VK_Sans_Text_Regular.eot?#iefix) format('embedded-opentype'),
+		url(./fonts/VK_Sans_Text_Regular.woff) format('woff'),
+		url(./fonts/VK_Sans_Text_Regular.ttf) format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -112,12 +112,12 @@ body {
 
 @font-face {
 	font-family: 'VK Sans Text';
-	src: url(./fonts/VK\ Sans\ Text\ Light.eot);
+	src: url(./fonts/VK_Sans_Text_Light.eot);
 	src:
-		url(./fonts/VK\ Sans\ Text\ Light.woff2) format('woff2'),
-		url(./fonts/VK\ Sans\ Text\ Light.eot?#iefix) format('embedded-opentype'),
-		url(./fonts/VK\ Sans\ Text\ Light.woff) format('woff'),
-		url(./fonts/VK\ Sans\ Text\ Light.ttf) format('truetype');
+		url(./fonts/VK_Sans_Text_Light.woff2) format('woff2'),
+		url(./fonts/VK_Sans_Text_Light.eot?#iefix) format('embedded-opentype'),
+		url(./fonts/VK_Sans_Text_Light.woff) format('woff'),
+		url(./fonts/VK_Sans_Text_Light.ttf) format('truetype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -125,12 +125,12 @@ body {
 
 @font-face {
 	font-family: 'VK Sans Text';
-	src: url(./fonts/VK\ Sans\ Text\ Medium.eot);
+	src: url(./fonts/VK_Sans_Text_Medium.eot);
 	src:
-		url(./fonts/VK\ Sans\ Text\ Medium.woff2) format('woff2'),
-		url(./fonts/VK\ Sans\ Text\ Medium.eot?#iefix) format('embedded-opentype'),
-		url(./fonts/VK\ Sans\ Text\ Medium.woff) format('woff'),
-		url(./fonts/VK\ Sans\ Text\ Medium.ttf) format('truetype');
+		url(./fonts/VK_Sans_Text_Medium.woff2) format('woff2'),
+		url(./fonts/VK_Sans_Text_Medium.eot?#iefix) format('embedded-opentype'),
+		url(./fonts/VK_Sans_Text_Medium.woff) format('woff'),
+		url(./fonts/VK_Sans_Text_Medium.ttf) format('truetype');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
@@ -138,13 +138,26 @@ body {
 
 @font-face {
 	font-family: 'VK Sans Text';
-	src: url(./fonts/VK\ Sans\ Text\ DemiBold.eot);
+	src: url(./fonts/VK_Sans_Text_DemiBold.eot);
 	src:
-		url(./fonts/VK\ Sans\ Text\ DemiBold.woff2) format('woff2'),
-		url(./fonts/VK\ Sans\ Text\ DemiBold.eot?#iefix) format('embedded-opentype'),
-		url(./fonts/VK\ Sans\ Text\ DemiBold.woff) format('woff'),
-		url(./fonts/VK\ Sans\ Text\ DemiBold.ttf) format('truetype');
+		url(./fonts/VK_Sans_Text_DemiBold.woff2) format('woff2'),
+		url(./fonts/VK_Sans_Text_DemiBold.eot?#iefix) format('embedded-opentype'),
+		url(./fonts/VK_Sans_Text_DemiBold.woff) format('woff'),
+		url(./fonts/VK_Sans_Text_DemiBold.ttf) format('truetype');
 	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'VK Sans Text';
+	src: url(./fonts/VK_Sans_Text_Bold.eot);
+	src:
+		url(./fonts/VK_Sans_Text_Bold.woff2) format('woff2'),
+		url(./fonts/VK_Sans_Text_Bold.eot?#iefix) format('embedded-opentype'),
+		url(./fonts/VK_Sans_Text_Bold.woff) format('woff'),
+		url(./fonts/VK_Sans_Text_Bold.ttf) format('truetype');
+	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
