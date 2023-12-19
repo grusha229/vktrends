@@ -1,7 +1,7 @@
 import * as stylex from "@stylexjs/stylex";
 import { colors, paddings } from "../../tokens.stylex.js";
 import { globalStyle } from "../../index.stylex.js";
-import BG_image from "../../photos/video_bg.png";
+import BG_image from "../../photos/video_bg.png?url";
 import SVG_PLAY from "../../svg/play.inline.svg?url";
 import SVG_ARC_1 from "../../svg/arc-1.inline.svg?url";
 import SVG_ARC_2 from "../../svg/arc-2.inline.svg?url";
@@ -53,8 +53,6 @@ const VideoBlockStyles = stylex.create({
         alignItems: "center"
     },
     video: {
-
-        backgroundImage: "url('/src/photos/video_bg.png')",
         backgroundPosition: "50% 50%",
         backgroundSize: "103%",
         display: "flex",
@@ -80,6 +78,9 @@ const VideoBlockStyles = stylex.create({
             padding: "30px",
         },
     },
+    backgroundImageURL: (url) => ({
+        backgroundImage: `url(${url})`,
+    }),
     link : {
         color: colors.white,
 
@@ -216,7 +217,7 @@ export const VideoBlock = () => {
         <div {...stylex.props(VideoBlockStyles.block)}>
             <div {...stylex.props(globalStyle.container)}>
                 <div {...stylex.props(VideoBlockStyles.content)}>
-                    <div {...stylex.props(VideoBlockStyles.video)}>
+                    <div {...stylex.props(VideoBlockStyles.video, VideoBlockStyles.backgroundImageURL(BG_image))}>
                         <a href={"https://vk.com/video"} {...stylex.props(VideoBlockStyles.link)}>Смотреть видео</a>
                         <div {...stylex.props(VideoBlockStyles.play)}>
                             <img {...stylex.props(VideoBlockStyles.play__item, VideoBlockStyles.play__item_play )} src={SVG_PLAY}/>
