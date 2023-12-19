@@ -5,7 +5,8 @@ import { globalStyle } from "../../index.stylex.js";
 
 const DESKTOP_XL = "@media screen and (min-width: 1920px)";
 const DESKTOP_MD = "@media screen and (min-width: 1440px) and (max-width: 1919px)";
-const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)"
+const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)";
+const MOBILE_MD = "@media screen and (max-width: 1023px)"
 
 const styles = stylex.create({
     header: {
@@ -29,31 +30,86 @@ const styles = stylex.create({
         alignContent: "center"
     },
     logo : {
-        height: "38px"
+        height: "38px",
+        [DESKTOP_XL] : {
+            height: "38px",
+        },
+        [DESKTOP_MD] : {
+            height: "28px",
+        },
+        [DESKTOP_S] : {
+            height: "20px",
+        },
+        [MOBILE_MD] : {
+            height: "22px",
+        },
     },
     title : {
-        width: "120px",
-        height: "38px",
-
         fontFamily: "VK Sans Display",
         leadingTrim: "both",
         textEdge: "cap",
-        fontSize: "20px",
         fontStyle: "normal",
-        fontWeight: "600",
-        lineHeight: "20px",
-        letterSpacing: "0.829px",
+  
         textTransform: "uppercase",
 
-        marginTop: "-1px", // Фикс проблемы верхнего отступа у текста
+        [DESKTOP_XL] : {
+            height: "38px",
+            width: "120px",
+            
+            fontSize: "20px",
+            fontWeight: "600",
+            lineHeight: "20px",
+            letterSpacing: "0.829px",
+        },
+        [DESKTOP_MD] : {
+            height: "28px",
+            width: "95px",
+
+            fontSize: "16px",
+            fontWeight: "600",
+            lineHeight: "15px",
+            letterSpacing: "0.64px",
+        },
+        [DESKTOP_S] : {
+            height: "20px",
+            width: "65px",
+
+            fontSize: "11px",
+            lineHeight: "11px",
+            letterSpacing: "0.44px",
+        },
+        [MOBILE_MD] : {
+            height: "22px",
+        },
     },
     title__section : {
-        margin: "0 0 0 40px",
         color: colors.title,
+
+        [DESKTOP_XL] : {
+            margin: "-1px 0 0 40px",
+        },
+        [DESKTOP_MD] : {
+            margin: "-1px 0 0 30px",
+        },
+        [DESKTOP_S] : {
+            margin: "-1px 0 0 20px",
+        },
+        [MOBILE_MD] : {
+            display: "none",
+        },
     },
     title__logo : {
         color: "#FFF",
-        margin: "0 0 0 20px",
+
+        [DESKTOP_XL] : {
+            margin: "-1px 0 0 20px",
+        },
+        [DESKTOP_MD] : {
+            margin: "-1px 0 0 15px",
+        },
+        [DESKTOP_S] : {
+            margin: "-1px 0 0 10px",
+        },
     },
     line: {
         width: "100%",
