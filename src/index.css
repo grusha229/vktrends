@@ -86,13 +86,15 @@ body {
 
 @font-face {
   font-family: "VK Sans Display Expanded";
-  src: url(./fonts/VK\ Sans\ Display\ Expanded\ Regular.woff);
+  src: 
+  		url(./fonts/VK\ Sans\ Display\ Expanded\ Regular.woff) format('woff2'),
+		url(./fonts/VK\ Sans\ Display\ Expanded\ Regular.eot?#iefix) format('embedded-opentype'),
+		url(./fonts/VK\ Sans\ Display\ Expanded\ Regular.woff) format('woff'),
+		url(./fonts/VK\ Sans\ Display\ Expanded\ Regular.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
-
 
 @font-face {
 	font-family: 'VK Sans Text';
