@@ -122,3 +122,29 @@ body {
 	font-style: normal;
 	font-display: swap;
 }
+
+@font-face {
+	font-family: 'VK Sans Text';
+	src: url(./fonts/VK\ Sans\ Text\ Medium.eot);
+	src:
+		url(./fonts/VK\ Sans\ Text\ Medium.woff2) format('woff2'),
+		url(./fonts/VK\ Sans\ Text\ Medium.eot?#iefix) format('embedded-opentype'),
+		url(./fonts/VK\ Sans\ Text\ Medium.woff) format('woff'),
+		url(./fonts/VK\ Sans\ Text\ Medium.ttf) format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'VK Sans Text';
+	src: url(./fonts/VK\ Sans\ Text\ DemiBold.eot);
+	src:
+		url(./fonts/VK\ Sans\ Text\ DemiBold.woff2) format('woff2'),
+		url(./fonts/VK\ Sans\ Text\ DemiBold.eot?#iefix) format('embedded-opentype'),
+		url(./fonts/VK\ Sans\ Text\ DemiBold.woff) format('woff'),
+		url(./fonts/VK\ Sans\ Text\ DemiBold.ttf) format('truetype');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
