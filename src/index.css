@@ -98,6 +98,19 @@ body {
 }
 
 @font-face {
+	font-family: "VK Sans Display Expanded";
+	src: url(./fonts/VK_Sans_Display_Expanded_DemiBold.eot);
+	src: 
+			url(./fonts/VK_Sans_Display_Expanded_DemiBold.woff2) format('woff2'),
+		  url(./fonts/VK_Sans_Display_Expanded_DemiBold.eot?#iefix) format('embedded-opentype'),
+		  url(./fonts/VK_Sans_Display_Expanded_DemiBold.woff) format('woff'),
+		  url(./fonts/VK_Sans_Display_Expanded_DemiBold.ttf) format('truetype');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+  }
+
+@font-face {
 	font-family: 'VK Sans Text';
 	src: url(./fonts/VK_Sans_Text_Regular.eot);
 	src:

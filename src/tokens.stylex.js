@@ -10,12 +10,12 @@ export const colors = stylex.defineVars({
   textFontFamily: "VK Sans Text, system-ui, Avenir, Helvetica, Arial, sans-serif",
   yellow: "#FFEB3A",
   white: "#FFF",
-  purple: "#C03AFF",
+  purple: "#E065FF",
   green: "#2ADE26",
   blue: "#3A71FF",
   lightBlue: "#3AFFFF",
   pink: "#FF2FB8",
-  orange: "FF9111",
+  orange: "#FF9111",
   red: "#FF1F00",
 });
 
