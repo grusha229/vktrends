@@ -48,12 +48,12 @@ const styles = stylex.create({
         marginTop: "-1px", // Фикс проблемы верхнего отступа у текста
     },
     title__section : {
-        marginLeft: "40px",
+        margin: "0 0 0 40px",
         color: colors.title,
     },
     title__logo : {
         color: "#FFF",
-        marginLeft: "20px",
+        margin: "0 0 0 20px",
     },
     line: {
         width: "100%",

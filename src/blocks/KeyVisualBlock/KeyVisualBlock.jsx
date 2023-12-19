@@ -41,6 +41,7 @@ const styles = stylex.create({
         fontFamily: "VK Sans Display Expanded",
         textTransform: "uppercase",
         zIndex: "3",
+        margin: "0",
         [DESKTOP_XL] : {
             fontSize: "280px",
             fontStyle: "normal",
@@ -100,6 +101,9 @@ const styles = stylex.create({
             lineHeight: "150%",
         }
     },
+    subtitle_text: {
+        margin: "0",
+    },
     info: {
         
         display: "grid",
@@ -130,6 +134,8 @@ const styles = stylex.create({
         zIndex: "1",
         position: "relative",
 
+        margin: "0",
+
         [DESKTOP_XL] : {
             fontSize: "90px",
 
@@ -156,13 +162,15 @@ const styles = stylex.create({
         background: colors.background,
         zIndex: "999",
         position: "relative",
+        margin: "0",
+
+        
         [DESKTOP_XL] : {
             paddingTop: "20px",
             marginTop: "-25px",
 
             fontSize: "24px",
             lineHeight: "150%",
-
         },
         [DESKTOP_MD] : {
             paddingTop: "16px",
@@ -216,7 +224,7 @@ export default function KeyVisualBlock (props) {
                     </h1>
                     <div {...stylex.props(styles.description)}>
                         <div {...stylex.props(styles.subtitle)}>
-                            <p>
+                            <p {...stylex.props(styles.subtitle_text)}>
                             Не следует, однако, забывать о том, что сложившаяся структура организации создаёт предпосылки качественно новых шагов для позиций, занимаемых участниками в отношении поставленных задач?
                             </p>
                         </div>

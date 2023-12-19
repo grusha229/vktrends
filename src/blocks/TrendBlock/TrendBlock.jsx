@@ -46,6 +46,7 @@ const TrendItemStyles = stylex.create({
         fontFamily: "VK Sans Display Expanded",
         fontStyle: "normal",
         textTransform: "uppercase",
+        margin: "0",
 
         [DESKTOP_XL] : {
             fontWeight: "600",
@@ -154,6 +155,7 @@ const TrendItemStyles = stylex.create({
         fontStyle: "normal",
         fontWeight: "600",
         textTransform: "uppercase",
+        margin: "0",
 
         [DESKTOP_XL] : {
             fontSize: "28px",
@@ -169,13 +171,13 @@ const TrendItemStyles = stylex.create({
         }
     },
     person__info_post: {
-        
-
+    
         fontFamily: "VK Sans Text",
 
         fontStyle: "normal",
         fontWeight: "400",
         lineHeight: "140%",
+        margin: "0",
 
         [DESKTOP_XL] : {
             fontSize: "24px",
@@ -231,6 +233,9 @@ const TrendItemStyles = stylex.create({
         
         letterSpacing: "0.3px",
         textTransform: "uppercase", 
+
+        margin: "0",
+
         [DESKTOP_XL] : {
             lineHeight: "50px" ,/* 150% */
             fontSize: "60px",
@@ -265,6 +270,9 @@ const TrendItemStyles = stylex.create({
             gap: "30px",
             fontSize: "14px",
         },
+    },
+    data__grid_text: {
+        margin: "0",
     }
 })
   
@@ -293,8 +301,8 @@ function TrendItem ({position , color}) {
                         <div {...stylex.props(TrendItemStyles.data)}>
                             <p {...stylex.props(TrendItemStyles.data__trend)}>Музыка</p>
                             <div {...stylex.props(TrendItemStyles.data__grid)}>
-                                <p>В 2024 году важно создавать музыкальный контент, который соответствует современным трендам и технологиям, таким как виртуальная и дополненная реальность, стриминговые сервисы и социальные медиа. Однако, не забывайте о качестве и оригинальности вашего творчества, создавайте новое. </p>
-                                <p>Используйте новые звуковые и музыкальные инструменты, экспериментируйте с жанрами и стилями, но при этом оставайтесь верными своему уникальному звучанию. Будьте готовы к быстрым изменениям в индустрии и активно изучайте новые технологии и платформы для продвижения вашей музыки.</p>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>В 2024 году важно создавать музыкальный контент, который соответствует современным трендам и технологиям, таким как виртуальная и дополненная реальность, стриминговые сервисы и социальные медиа. Однако, не забывайте о качестве и оригинальности вашего творчества, создавайте новое. </p>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Используйте новые звуковые и музыкальные инструменты, экспериментируйте с жанрами и стилями, но при этом оставайтесь верными своему уникальному звучанию. Будьте готовы к быстрым изменениям в индустрии и активно изучайте новые технологии и платформы для продвижения вашей музыки.</p>
                             </div>
                         </div>
                     </div>                    
