@@ -22,8 +22,10 @@ const styles = stylex.create({
         },
         [DESKTOP_S] : {
             padding: "16px 0",
-        }
-
+        },
+        [MOBILE_MD] : {
+            padding: "30px 0",
+        },
     },
     content: {
         display: "flex",
@@ -110,6 +112,9 @@ const styles = stylex.create({
         [DESKTOP_S] : {
             margin: "-1px 0 0 10px",
         },
+        [MOBILE_MD] : {
+            margin: "-1px 0 0 10px",
+        },
     },
     line: {
         width: "100%",
@@ -117,7 +122,10 @@ const styles = stylex.create({
         height: "1px",
         opacity: "0.7",
         position: "absolute",
-        bottom: "0"
+        bottom: "0",
+        [MOBILE_MD] : {
+            display: "none",
+        },
     }
 })
 

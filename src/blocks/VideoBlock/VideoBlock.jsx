@@ -8,7 +8,8 @@ import SVG_ARC_2 from "../../svg/arc-2.inline.svg?url";
 
 const DESKTOP_XL = "@media screen and (min-width: 1920px)";
 const DESKTOP_MD = "@media screen and (min-width: 1440px) and (max-width: 1919px)";
-const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)"
+const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)";
+const MOBILE_MD = "@media screen and (max-width: 1023px)"
 
 
 const rotation = stylex.keyframes({
@@ -45,6 +46,9 @@ const VideoBlockStyles = stylex.create({
         [DESKTOP_S] : {
             paddingBottom: paddings.padding_sm,
         },
+        [MOBILE_MD] : {
+            paddingBottom: paddings.padding_s,
+        },
     },
     content: {
         position: 'relative',
@@ -77,6 +81,11 @@ const VideoBlockStyles = stylex.create({
             height: "398px",
             padding: "30px",
         },
+        [MOBILE_MD] : {
+            width: "100%",
+            height: "164px",
+            padding: "20px",
+        },
     },
     backgroundImageURL: (url) => ({
         backgroundImage: `url(${url})`,
@@ -108,6 +117,11 @@ const VideoBlockStyles = stylex.create({
             lineHeight: "48px", /* 100% */
             fontSize: "48px",
         },
+        [MOBILE_MD] : {
+            width: "175px",
+            lineHeight: "110%",
+            fontSize: "18px",
+        },
     },
     play: {
         position: "relative",
@@ -133,6 +147,11 @@ const VideoBlockStyles = stylex.create({
             width: "186px",
             height: "186px",
             marginLeft: "30px",
+        },
+        [MOBILE_MD] : {
+            width: "80px",
+            height: "80px",
+            marginLeft: "auto",
         },
     },
     play__item : {
@@ -160,6 +179,12 @@ const VideoBlockStyles = stylex.create({
             marginLeft: "-89px",
             marginTop: "-89px",
         },
+        [MOBILE_MD] : {
+            width: "78px",
+            height: "78px",
+            marginLeft: "-39px",
+            marginTop: "-39px",
+        },
     },
     play__item_arc2 : {
   
@@ -182,7 +207,12 @@ const VideoBlockStyles = stylex.create({
             height: "186px",
             marginLeft: "-93px",
             marginTop: "-93px",
-    
+        },
+        [MOBILE_MD] : {
+            width: "80px",
+            height: "80px",
+            marginLeft: "-40px",
+            marginTop: "-40px",
         },
     },
     play__item_play: {
@@ -207,6 +237,12 @@ const VideoBlockStyles = stylex.create({
             height: "160px",
             marginLeft: "-80px",
             marginTop: "-80px",
+        },
+        [MOBILE_MD] : {
+            width: "76px",
+            height: "76px",
+            marginLeft: "-38px",
+            marginTop: "-38px",
         },
     }
 })

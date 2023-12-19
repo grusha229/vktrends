@@ -14,7 +14,8 @@ const TEXTS = [
 
 const DESKTOP_XL = "@media screen and (min-width: 1920px)";
 const DESKTOP_MD = "@media screen and (min-width: 1440px) and (max-width: 1919px)";
-const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)"
+const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)";
+const MOBILE_MD = "@media screen and (max-width: 1023px)"
 
 const TrendItemStyles = stylex.create({
     block: {
@@ -30,6 +31,9 @@ const TrendItemStyles = stylex.create({
         },
         [DESKTOP_S] : {
             paddingBottom: paddings.padding_sm,
+        },
+        [MOBILE_MD] : {
+            paddingBottom: paddings.padding_s,
         }
     },
     content: {
@@ -66,6 +70,13 @@ const TrendItemStyles = stylex.create({
             letterSpacing: "0.28px",
             fontSize: "28px",
         },
+        [MOBILE_MD] : {
+            fontWeight: "600",
+            lineHeight: "23px",
+            letterSpacing: "0.2px",
+            fontSize: "20px",
+            textAlign: "left"
+        },
     },
     dynamicColor: (value) => ({
         color: value,
@@ -93,14 +104,26 @@ const TrendItemStyles = stylex.create({
             top: "150px",
             left: "50%",
             transform: "translate(-50%,0)"
+        },
+        [MOBILE_MD] : {
+            width: "450px",
+            top: "45%",
+            left: "50%",
+            transform: "translate(-50%,-50%)"
         }
     },
     person: {
         display: 'flex',
         flexDirection: "row",
+
+        [MOBILE_MD] : {
+            flexDirection: "column-reverse",
+            gap: "40px",
+            alignItems: "center"
+        },
     },
     personLayout: {
-        marginTop: "90px",
+        
         ':after' :{
             content: '',
             backgroundColor: colors.title,
@@ -109,18 +132,22 @@ const TrendItemStyles = stylex.create({
             marginTop: "-5px"
         },
         [DESKTOP_XL] : {
+            marginTop: "90px",
             paddingLeft: "656px",
         },
         [DESKTOP_MD] : {
+            marginTop: "70px",
             paddingLeft: "492px",
         },
         [DESKTOP_S] : {
+            marginTop: "50px",
             paddingLeft: "350px",
-        }
+        },
+        [MOBILE_MD] : {
+            marginTop: "40px",
+        },
     },
     person__photo: {
-        
-
         [DESKTOP_XL] : {
             width: "440px",
         },
@@ -128,6 +155,9 @@ const TrendItemStyles = stylex.create({
             width: "330px",
         },
         [DESKTOP_S] : {
+            width: "235px",
+        },
+        [MOBILE_MD] : {
             width: "235px",
         }
     },
@@ -149,6 +179,9 @@ const TrendItemStyles = stylex.create({
         [DESKTOP_S] : {
             paddingLeft: "20px",
             gap: "10px",
+        },
+        [MOBILE_MD] : {
+            gap: "10px",
         }
     },
     person__info_name: {
@@ -168,7 +201,11 @@ const TrendItemStyles = stylex.create({
         [DESKTOP_S] : {
             fontSize: "16px",
             lineHeight: "140%",
-        }
+        },
+        [MOBILE_MD] : {
+            fontSize: "16px",
+            lineHeight: "22.4px",
+        },
     },
     person__info_post: {
     
@@ -190,6 +227,10 @@ const TrendItemStyles = stylex.create({
         [DESKTOP_S] : {
             fontSize: "14px",
             width: "240px"
+        },
+        [MOBILE_MD] : {
+            fontSize: "14px",
+            paddingRight: "20px"
         }
     },
     dataLayout: {
@@ -203,6 +244,9 @@ const TrendItemStyles = stylex.create({
         },
         [DESKTOP_S] : {
             paddingLeft: "350px",
+        },
+        [MOBILE_MD] : {
+            paddingLeft: "0",
         }
     },
     data: {
@@ -218,13 +262,14 @@ const TrendItemStyles = stylex.create({
         [DESKTOP_S] : {
             padding: "30px",
         },
+        [MOBILE_MD] : {
+            padding: "0",
+        },
     },
 
     data__trend: {
         position: "absolute",
         width: "430px",
-        top: "-25px",
-        left: "-460px",
         textAlign: "right",
         color: colors.title,
         
@@ -239,15 +284,28 @@ const TrendItemStyles = stylex.create({
         [DESKTOP_XL] : {
             lineHeight: "50px" ,/* 150% */
             fontSize: "60px",
+            top: "-25px",
+            left: "-460px",
         },
         [DESKTOP_MD] : {
             lineHeight: "45px" ,/* 150% */
             fontSize: "36px",
+            top: "-25px",
+            left: "-460px",
         },
         [DESKTOP_S] : {
             lineHeight: "32px" ,
             fontSize: "26px",
+            top: "-25px",
+            left: "-460px",
         },
+        [MOBILE_MD] : {
+            position: "inherit",
+            top: null,
+            left: null,
+            textAlign: "left",
+            margin: "46px 0 32px 0"
+        }
     },
     data__grid: {
         display: "grid",
@@ -270,6 +328,10 @@ const TrendItemStyles = stylex.create({
             gap: "30px",
             fontSize: "14px",
         },
+        [MOBILE_MD] : {
+            gridTemplateColumns: "1fr",
+            gap: "32px"
+        }
     },
     data__grid_text: {
         margin: "0",

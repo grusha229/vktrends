@@ -7,7 +7,7 @@ import SVG_PATTERN from "../../svg/pattern_kv.inline.svg?url"
 const DESKTOP_XL = "@media screen and (min-width: 1920px)";
 const DESKTOP_MD = "@media screen and (min-width: 1440px) and (max-width: 1919px)";
 const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)"
-// const mobile_md = "@media screen and (max-width: 375px)"
+const MOBILE_MD = "@media screen and (max-width: 1023px)"
 
 
 const styles = stylex.create({
@@ -25,6 +25,9 @@ const styles = stylex.create({
         [DESKTOP_S] : {
             paddingBottom: paddings.padding_sm,
         },
+        [MOBILE_MD] : {
+            paddingBottom: paddings.padding_s,
+        },
     },
     content: {
         position: 'relative',
@@ -32,7 +35,10 @@ const styles = stylex.create({
         flexDirection: "column",
         // alignItems: "center"
         alignItems: "flex-start",
-        // height: "2050px"
+        [MOBILE_MD] : {
+            gap: "10px"
+        },
+
     },
     theme : {
         // position: "absolute",
@@ -63,6 +69,10 @@ const styles = stylex.create({
         [DESKTOP_S]: {
             fontSize: "48px",
             letterSpacing: "0.48px"
+        },
+        [MOBILE_MD] : {
+            fontSize: "28px",
+            letterSpacing: "0.28px"
         }
     },
     theme__descr : {
@@ -89,6 +99,9 @@ const styles = stylex.create({
         [DESKTOP_S]: {
             height: "71px",
             paddingLeft: "220px",
+        },
+        [MOBILE_MD] : {
+            height: "38px",
         }
     },
     second: {
@@ -106,6 +119,9 @@ const styles = stylex.create({
         [DESKTOP_S]: {
             height: "74px",
             paddingRight: "220px" ,
+        },
+        [MOBILE_MD] : {
+            height: "32px",
         }
     },
     third: {
@@ -122,6 +138,9 @@ const styles = stylex.create({
         [DESKTOP_S]: {
             height: "74px",
             paddingLeft: "140px",
+        },
+        [MOBILE_MD] : {
+            height: "34px",
         }
     },
     fourth: {
@@ -140,6 +159,9 @@ const styles = stylex.create({
         [DESKTOP_S]: {
             height: "80px",
             paddingRight: "140px" ,
+        },
+        [MOBILE_MD] : {
+            height: "36px",
         }
     },
     fifth: {
@@ -154,6 +176,10 @@ const styles = stylex.create({
         },
         [DESKTOP_S]: {
             height: "135px"
+        },
+        [MOBILE_MD] : {
+            textAlign: "left",
+            height: "69px",
         }
     },
     sixth: {
@@ -168,6 +194,10 @@ const styles = stylex.create({
         },
         [DESKTOP_S]: {
             height: "86px"
+        },
+        [MOBILE_MD] : {
+            textAlign: "right",
+            height: "68px",
         }
     }
 })

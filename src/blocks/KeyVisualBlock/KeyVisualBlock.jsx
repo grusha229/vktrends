@@ -6,8 +6,8 @@ import { useEffect } from "react";
 
 const DESKTOP_XL = "@media screen and (min-width: 1920px)";
 const DESKTOP_MD = "@media screen and (min-width: 1440px) and (max-width: 1919px)";
-const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)"
-// const mobile_md = "@media screen and (max-width: 375px)"
+const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)";
+const MOBILE_MD = "@media screen and (max-width: 1023px)";
 
 const styles = stylex.create({
     kvblock: {
@@ -25,6 +25,10 @@ const styles = stylex.create({
         },
         [DESKTOP_S] : {
             paddingTop: "110px",
+            paddingBottom: paddings.padding_sm,
+        },
+        [MOBILE_MD] : {
+            paddingTop: "65px",
             paddingBottom: paddings.padding_sm,
         }
     },
@@ -62,6 +66,13 @@ const styles = stylex.create({
             fontWeight: "600",
             lineHeight: "110%",
             letterSpacing: "1.5px",
+        },
+        [MOBILE_MD] : {
+            fontSize: "40px",
+            fontStyle: "normal",
+            fontWeight: "600",
+            lineHeight: "110%",
+            letterSpacing: "0.4px",
         }
     },
     colored : {
@@ -81,7 +92,11 @@ const styles = stylex.create({
         [DESKTOP_S] : {
             marginTop: "70px",
             paddingLeft: "220px",
-        }
+        },
+        [MOBILE_MD] : {
+            marginTop: "24px",
+            paddingLeft: "0",
+        },
     },
     subtitle: {
         color: colors.text,
@@ -99,6 +114,11 @@ const styles = stylex.create({
         [DESKTOP_S] : {
             fontSize: "14px",
             lineHeight: "150%",
+        },
+        [MOBILE_MD] : {
+            fontSize: "16px",
+            lineHeight: "150%",
+            // marginBottom: paddings.padding_s
         }
     },
     subtitle_text: {
@@ -123,6 +143,11 @@ const styles = stylex.create({
             marginTop: "120px",
             columnGap: "102px",
             rowGap: "80px",
+        },
+        [MOBILE_MD] : {
+            gridTemplateColumns: "1fr",
+            marginTop: "100px",
+            rowGap: "40px",
         }
     },
     info__title: {
@@ -151,6 +176,11 @@ const styles = stylex.create({
             fontSize: "48px",
             lineHeight: "110%", /* 99px */
             letterSpacing: "0.48px",
+        },
+        [MOBILE_MD] : {
+            fontSize: "40px",
+            lineHeight: "110%", /* 99px */
+            letterSpacing: "0.40px",
         },
     },
     info__description: {
@@ -186,6 +216,13 @@ const styles = stylex.create({
             fontSize: "14px",
             lineHeight: "150%",
         },
+        [MOBILE_MD]: {
+            paddingTop: "10px",
+            marginTop: "-10px",
+
+            fontSize: "16px",
+            lineHeight: "150%",
+        }
     },
     bg: {
         position: "absolute",
@@ -206,6 +243,11 @@ const styles = stylex.create({
             top: "290px",
             right: "-320px",
             width: "800px"
+        },
+        [MOBILE_MD] : {
+            top: "25%",
+            left: "45%",
+            width: "95%"
         },
     }
 })

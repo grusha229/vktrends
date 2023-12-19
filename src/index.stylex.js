@@ -4,7 +4,7 @@ import * as stylex from "@stylexjs/stylex";
 const DESKTOP_XL = "@media screen and (min-width: 1920px)";
 const DESKTOP_MD = "@media screen and (min-width: 1440px) and (max-width: 1919px)";
 const DESKTOP_S = "@media screen and (min-width: 1024px) and (max-width: 1439px)"
-// const mobile_md = "@media screen and (max-width: 375px)"
+const MOBILE_MD = "@media screen and (max-width: 1023px)"
 
 export const globalStyle = stylex.create({
     container: {
@@ -19,5 +19,8 @@ export const globalStyle = stylex.create({
         [DESKTOP_S] : {
             maxWidth: "964px",
         },
+        [MOBILE_MD]: {
+            padding: "0 20px"
+        }
     }
 })
