@@ -1,0 +1,55 @@
+.Modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+    border: none;
+
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 120;
+}
+
+@media screen and (min-width: 1920px) {
+    .Modal {
+        width: 1440px;
+        height: 810px;    
+    }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+    .Modal {
+        width: 1024px;
+        height: 576px;    
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .Modal {
+        width: 960px;
+        height: 540px;    
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .Modal {
+        width: 80%;
+        height: 600px;    
+    }
+}

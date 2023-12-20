@@ -1,10 +1,13 @@
 import * as stylex from "@stylexjs/stylex";
+
 import { colors, paddings } from "../../tokens.stylex.js";
 import { globalStyle } from "../../index.stylex.js";
 import BG_image from "../../photos/video_bg.png?url";
 import SVG_PLAY from "../../svg/play.inline.svg?url";
 import SVG_ARC_1 from "../../svg/arc-1.inline.svg?url";
 import SVG_ARC_2 from "../../svg/arc-2.inline.svg?url";
+import { useState } from "react";
+import ModalBlock from "../../components/modal/ModalBlock.jsx";
 
 const DESKTOP_XL = "@media screen and (min-width: 1920px)";
 const DESKTOP_MD = "@media screen and (min-width: 1440px) and (max-width: 1919px)";
@@ -244,25 +247,80 @@ const VideoBlockStyles = stylex.create({
             marginLeft: "-38px",
             marginTop: "-38px",
         },
-    }
+    },
+    modalContent: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        width: '960px',
+        height: '540px',
+        zIndex: "10",
+        backgroundColor: '#000',
+        border: "none",
+        overflow: "hidden",
+    },
+    overlay: {
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        zIndex: "120"
+    },
 })
+
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        width: '960px',
+        height: '540px',
+        zIndex: "10",
+        backgroundColor: '#000',
+        border: "none",
+        overflow: "hidden",
+    },
+    overlay: {
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        zIndex: "120"
+    },
+  };
 
 export const VideoBlock = () => {
 
+    const [modalIsOpen, setIsOpen] = useState(false);
+
+    function openModal() {
+      setIsOpen(true);
+      document.body.style.overflow = 'hidden';
+    }
+  
+    function closeModal() {
+      setIsOpen(false);
+      document.body.style.overflow = 'unset';
+    }
+  
+
     return (
-        <div {...stylex.props(VideoBlockStyles.block)}>
-            <div {...stylex.props(globalStyle.container)}>
-                <div {...stylex.props(VideoBlockStyles.content)}>
-                    <div {...stylex.props(VideoBlockStyles.video, VideoBlockStyles.backgroundImageURL(BG_image))}>
-                        <a href={"https://vk.com/video"} {...stylex.props(VideoBlockStyles.link)}>Смотреть видео</a>
-                        <div {...stylex.props(VideoBlockStyles.play)}>
-                            <img {...stylex.props(VideoBlockStyles.play__item, VideoBlockStyles.play__item_play )} src={SVG_PLAY}/>
-                            <img {...stylex.props(VideoBlockStyles.play__item, VideoBlockStyles.play__item_arc1, animations.positiveRotate)} src={SVG_ARC_1}/>
-                            <img {...stylex.props(VideoBlockStyles.play__item, VideoBlockStyles.play__item_arc2, animations.negativeRotate)} src={SVG_ARC_2}/>
+        <>
+            <div {...stylex.props(VideoBlockStyles.block)}>
+                <div {...stylex.props(globalStyle.container)}>
+                    <div {...stylex.props(VideoBlockStyles.content)}>
+                        <div {...stylex.props(VideoBlockStyles.video, VideoBlockStyles.backgroundImageURL(BG_image))}>
+                            <a href={"https://vk.com/video"} {...stylex.props(VideoBlockStyles.link)}>Смотреть видео</a>
+                            <div {...stylex.props(VideoBlockStyles.play)} onClick={openModal}>
+                                <img {...stylex.props(VideoBlockStyles.play__item, VideoBlockStyles.play__item_play )} src={SVG_PLAY}/>
+                                <img {...stylex.props(VideoBlockStyles.play__item, VideoBlockStyles.play__item_arc1, animations.positiveRotate)} src={SVG_ARC_1}/>
+                                <img {...stylex.props(VideoBlockStyles.play__item, VideoBlockStyles.play__item_arc2, animations.negativeRotate)} src={SVG_ARC_2}/>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <ModalBlock isOpen={modalIsOpen} onRequestClose={closeModal} />
+        </>
     )
 }

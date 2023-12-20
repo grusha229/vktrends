@@ -403,8 +403,8 @@ export default function TrendBlock () {
                         <div {...stylex.props(TrendItemStyles.person)}>
                             <img {...stylex.props(TrendItemStyles.person__photo)} src={SPEAKER_MUSIC}/>
                             <div {...stylex.props(TrendItemStyles.person__info)}>
-                                <p {...stylex.props(TrendItemStyles.person__info_name)} >Дарья Великолепная константинопольская</p>
-                                <p {...stylex.props(TrendItemStyles.person__info_post)} >Генеральный директор «Компас», музыкальный продюсер</p>
+                                <p {...stylex.props(TrendItemStyles.person__info_name)} >Сергей Мудрик</p>
+                                <p {...stylex.props(TrendItemStyles.person__info_post)} >Главный редактор VK Музыки</p>
                             </div>
                         </div>
 
