@@ -3,6 +3,13 @@ import { colors, paddings} from "../../tokens.stylex.js";
 import { globalStyle } from "../../index.stylex.js";
 import SVG_PATTERN from "../../svg/star.inline.svg?url"
 
+import SVG_PATTERN_MUSIC from "../../svg/music_bg.svg?url"
+import SVG_PATTERN_NEURO from "../../svg/neuro_bg.svg?url"
+import SVG_PATTERN_PODCAST from "../../svg/podcast_bg.svg?url"
+import SVG_PATTERN_STORY from "../../svg/story_bg.svg?url"
+import SVG_PATTERN_THREAD from "../../svg/thread_bg.svg?url"
+import SVG_PATTERN_VIDEO from "../../svg/video_bg.svg?url"
+
 import SPEAKER_MUSIC from "../../photos/speaker_music.png";
 import SPEAKER_NEURO from "../../photos/speaker_neuro.png";
 import SPEAKER_PODCAST from "../../photos/speaker_podcast.png";
@@ -419,7 +426,7 @@ export default function TrendBlock () {
                         </div>
                     </div>                    
                 </div>
-                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN}/>
+                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_MUSIC}/>
             </div>
         </div>
         <div id={`second-trend`} {...stylex.props(TrendItemStyles.block)}>
@@ -449,7 +456,7 @@ export default function TrendBlock () {
                         </div>
                     </div>                    
                 </div>
-                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN}/>
+                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_PODCAST}/>
             </div>
         </div>
         <div id={`third-trend`} {...stylex.props(TrendItemStyles.block)}>
@@ -479,7 +486,7 @@ export default function TrendBlock () {
                         </div>
                     </div>                    
                 </div>
-                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN}/>
+                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_NEURO}/>
             </div>
         </div>
         <div id={`fourth-trend`} {...stylex.props(TrendItemStyles.block)}>
@@ -509,7 +516,7 @@ export default function TrendBlock () {
                         </div>
                     </div>                    
                 </div>
-                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN}/>
+                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_THREAD}/>
             </div>
         </div>
         <div id={`fifth-trend`} {...stylex.props(TrendItemStyles.block)}>
@@ -539,7 +546,7 @@ export default function TrendBlock () {
                         </div>
                     </div>                    
                 </div>
-                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN}/>
+                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_STORY}/>
             </div>
         </div>
         <div id={`sixth-trend`} {...stylex.props(TrendItemStyles.block)}>
@@ -569,7 +576,7 @@ export default function TrendBlock () {
                         </div>
                     </div>                    
                 </div>
-                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN}/>
+                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_VIDEO}/>
             </div>
         </div>
         </>

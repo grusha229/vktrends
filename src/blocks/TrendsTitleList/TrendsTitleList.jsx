@@ -180,6 +180,7 @@ const styles = stylex.create({
         [MOBILE_MD] : {
             textAlign: "left",
             height: "69px",
+            alignSelf: "flex-start",
         }
     },
     sixth: {
@@ -198,6 +199,7 @@ const styles = stylex.create({
         [MOBILE_MD] : {
             textAlign: "right",
             height: "68px",
+            alignSelf: "flex-end",
         }
     }
 })
@@ -233,7 +235,7 @@ export default function TrendsTitleList () {
                         {/* <p {...stylex.props(styles.theme__descr)}>Прародителем текста-рыбы является известный «Lorem Ipsum» </p> */}
                     </div>
                     <div data-id={"fifth"} {...stylex.props(styles.theme, styles.fifth)} onClick={handleClick}>
-                        <p {...stylex.props(styles.theme__title)}>Сторителлинг и&nbsp;креатив </p>
+                        <p {...stylex.props(styles.theme__title)}>Сторителлинг<br/>и&nbsp;креатив </p>
                         {/* <p {...stylex.props(styles.theme__descr)}>Прародителем текста-рыбы является известный «Lorem Ipsum» </p> */}
                     </div>
                     <div data-id={"sixth"} {...stylex.props(styles.theme, styles.sixth)} onClick={handleClick}>
