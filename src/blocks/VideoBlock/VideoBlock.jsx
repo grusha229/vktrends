@@ -95,7 +95,27 @@ const VideoBlockStyles = stylex.create({
     }),
     link : {
         color: colors.white,
+        display: "flex",
+        flexDirection: "column",
 
+        leadingTrim: "both",
+        textDecoration: "none",
+
+        [DESKTOP_XL] : {
+            gap: "40px"
+        },
+        [DESKTOP_MD] : {
+            gap: "30px"
+        },
+        [DESKTOP_S] : {
+            gap: "30px"
+        },
+        [MOBILE_MD] : {
+            gap: "12px"
+        },
+    },
+
+    link_title : {
         leadingTrim: "both",
         textDecoration: "none",
         
@@ -124,6 +144,34 @@ const VideoBlockStyles = stylex.create({
             width: "175px",
             lineHeight: "110%",
             fontSize: "18px",
+        },
+    },
+    link_descr : {
+
+        fontFamily: "VK Sans Text",
+
+        textEdge: "cap",
+        fontStyle: "normal",
+
+        [DESKTOP_XL] : {
+            width: "796px",
+            lineHeight: "37px", /* 100% */
+            fontSize: "24px",
+        },
+        [DESKTOP_MD] : {
+            width: "734px",
+            lineHeight: "25px", /* 100% */
+            fontSize: "18px",
+        },
+        [DESKTOP_S] : {
+            width: "540px",
+            lineHeight: "20px", /* 100% */
+            fontSize: "14px",
+        },
+        [MOBILE_MD] : {
+            width: "175px",
+            lineHeight: "20px",
+            fontSize: "14px",
         },
     },
     play: {
@@ -266,6 +314,50 @@ const VideoBlockStyles = stylex.create({
         backgroundColor: "rgba(0, 0, 0, 0.5)",
         zIndex: "120"
     },
+    title: {
+        width: "100%",
+        textAlign: "center",
+        leadingTrim: "both",
+        textEdge: "cap",
+        fontFamily: "VK Sans Display Expanded",
+        fontStyle: "normal",
+        textTransform: "uppercase",
+        margin: "0",
+
+        [DESKTOP_XL] : {
+            fontWeight: "600",
+            lineHeight: "114%",
+            letterSpacing: "0.54px",
+            fontSize: "54px",
+            margin: "0 0 100px 0",
+        },
+        [DESKTOP_MD] : {
+            fontWeight: "600",
+            lineHeight: "115%",
+            letterSpacing: "0.42px",
+            fontSize: "42px",
+            margin: "0 0 80px 0",
+        },
+        [DESKTOP_S] : {
+            fontWeight: "600",
+            lineHeight: "115%",
+            letterSpacing: "0.28px",
+            fontSize: "28px",
+            margin: "0 0 60px 0",
+        },
+        [MOBILE_MD] : {
+            fontWeight: "600",
+            lineHeight: "23px",
+            letterSpacing: "0.2px",
+            fontSize: "20px",
+            textAlign: "left",
+            margin: "0 0 40px 0",
+        },
+    },
+    dynamicColor: (value) => ({
+        color: value,
+    }),
+
 })
 
 const customStyles = {
@@ -309,8 +401,16 @@ export const VideoBlock = () => {
             <div {...stylex.props(VideoBlockStyles.block)}>
                 <div {...stylex.props(globalStyle.container)}>
                     <div {...stylex.props(VideoBlockStyles.content)}>
+                        <h2 {...stylex.props(VideoBlockStyles.title)}>Следите за&nbsp;трендами, чтобы быть впереди. А&nbsp;найти аудиторию для&nbsp;своего творчества <span {...stylex.props(VideoBlockStyles.dynamicColor(colors.title))}>можно&nbsp;ВКонтакте.</span></h2>
                         <div {...stylex.props(VideoBlockStyles.video, VideoBlockStyles.backgroundImageURL(BG_image))}>
-                            <a href={"https://vk.com/video"} {...stylex.props(VideoBlockStyles.link)}>Смотреть видео</a>
+                            <a href={"https://vk.com/video"} {...stylex.props(VideoBlockStyles.link)}>
+                                <div {...stylex.props(VideoBlockStyles.link_title)}>
+                                    Смотрите видео
+                                </div>
+                                <div {...stylex.props(VideoBlockStyles.link_descr)}>
+                                    Это ещё больше экспертных подробностей о&nbsp;будущем контента. 
+                                </div>
+                            </a>
                             <div {...stylex.props(VideoBlockStyles.play)} onClick={openModal}>
                                 <img {...stylex.props(VideoBlockStyles.play__item, VideoBlockStyles.play__item_play )} src={SVG_PLAY}/>
                                 <img {...stylex.props(VideoBlockStyles.play__item, VideoBlockStyles.play__item_arc1, animations.positiveRotate)} src={SVG_ARC_1}/>

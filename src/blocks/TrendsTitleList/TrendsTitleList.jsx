@@ -231,7 +231,7 @@ export default function TrendsTitleList () {
                         {/* <p {...stylex.props(styles.theme__descr)}>Прародителем текста-рыбы является известный «Lorem Ipsum» </p> */}
                     </div>
                     <div data-id={"fourth"} {...stylex.props(styles.theme, styles.fourth)} onClick={handleClick}>
-                        <p {...stylex.props(styles.theme__title)}>Тредвотчинг</p>
+                        <p {...stylex.props(styles.theme__title)}>Трендвотчинг</p>
                         {/* <p {...stylex.props(styles.theme__descr)}>Прародителем текста-рыбы является известный «Lorem Ipsum» </p> */}
                     </div>
                     <div data-id={"fifth"} {...stylex.props(styles.theme, styles.fifth)} onClick={handleClick}>
