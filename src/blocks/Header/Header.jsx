@@ -2,6 +2,7 @@ import * as stylex from "@stylexjs/stylex";
 import LogoSVG from "../../svg/logo.inline.svg?url"
 import { colors } from "../../tokens.stylex.js";
 import { globalStyle } from "../../index.stylex.js";
+import SVG_CLOSE from "../../svg/close.inline.svg?url"
 
 const DESKTOP_XL = "@media screen and (min-width: 1920px)";
 const DESKTOP_MD = "@media screen and (min-width: 1440px) and (max-width: 1919px)";
@@ -29,7 +30,9 @@ const styles = stylex.create({
     },
     content: {
         display: "flex",
-        alignContent: "center"
+        alignContent: "center",
+        flexWrap: "wrap",
+        alignItems: "center",
     },
     logo : {
         height: "38px",
@@ -57,7 +60,6 @@ const styles = stylex.create({
         [DESKTOP_XL] : {
             height: "38px",
             width: "120px",
-            
             fontSize: "20px",
             fontWeight: "600",
             lineHeight: "20px",
@@ -126,6 +128,25 @@ const styles = stylex.create({
         [MOBILE_MD] : {
             display: "none",
         },
+    },
+    close: {
+        margin: "0 0 0 auto",
+
+        [DESKTOP_XL] : {
+            width: "60px"
+        },
+        [DESKTOP_MD] : {
+            width: "45px"
+        },
+        [DESKTOP_S] : {
+            width: "32px"
+        },
+        [MOBILE_MD] : {
+            width: "40px"
+        },
+    },
+    close_svg: {
+        width: "100%"
     }
 })
 
@@ -139,6 +160,9 @@ export default function Header () {
                     <img {...stylex.props(styles.logo)} src={LogoSVG}/>
                     <p {...stylex.props(styles.title, styles.title__logo)}>Итоги 2023 года </p>
                     <p {...stylex.props(styles.title, styles.title__section)}>Тренды 2024</p>
+                    <a {...stylex.props(styles.close)} target="_top" href="https://vk.com/2023/">
+                        <img {...stylex.props(styles.close_svg)} src={SVG_CLOSE}/>
+                    </a>
                 </div>
             </div>
             <div {...stylex.props(styles.line)}/>
