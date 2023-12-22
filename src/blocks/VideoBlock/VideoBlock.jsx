@@ -126,23 +126,23 @@ const VideoBlockStyles = stylex.create({
         textTransform: "uppercase",
 
         [DESKTOP_XL] : {
-            width: "796px",
+            width: "968px",
             lineHeight: "90px", /* 100% */
-            fontSize: "90px",
+            fontSize: "54px",
         },
         [DESKTOP_MD] : {
             width: "734px",
-            lineHeight: "68px", /* 100% */
-            fontSize: "68px",
+            lineHeight: "67px", /* 100% */
+            fontSize: "42px",
         },
         [DESKTOP_S] : {
             width: "540px",
             lineHeight: "48px", /* 100% */
-            fontSize: "48px",
+            fontSize: "28px",
         },
         [MOBILE_MD] : {
             width: "175px",
-            lineHeight: "110%",
+            lineHeight: "20px",
             fontSize: "18px",
         },
     },
@@ -169,7 +169,7 @@ const VideoBlockStyles = stylex.create({
             fontSize: "14px",
         },
         [MOBILE_MD] : {
-            width: "175px",
+            width: "190px",
             lineHeight: "20px",
             fontSize: "14px",
         },
@@ -187,17 +187,17 @@ const VideoBlockStyles = stylex.create({
         [DESKTOP_XL] : {
             width: "360px",
             height: "360px",
-            marginLeft: "130px",
+            marginLeft: "40px",
         },
         [DESKTOP_MD] : {
             width: "264px",
             height: "264px",
-            marginLeft: "50px",
+            margin: "0",
         },
         [DESKTOP_S] : {
             width: "186px",
             height: "186px",
-            marginLeft: "30px",
+            margin: "0",
         },
         [MOBILE_MD] : {
             width: "80px",
@@ -405,10 +405,10 @@ export const VideoBlock = () => {
                         <div {...stylex.props(VideoBlockStyles.video, VideoBlockStyles.backgroundImageURL(BG_image))}>
                             <a href={"https://vk.com/video"} {...stylex.props(VideoBlockStyles.link)}>
                                 <div {...stylex.props(VideoBlockStyles.link_title)}>
-                                    Смотрите видео
+                                    Смотрите видео&nbsp;–
                                 </div>
                                 <div {...stylex.props(VideoBlockStyles.link_descr)}>
-                                    Это ещё больше экспертных подробностей о&nbsp;будущем контента. 
+                                    это ещё больше экспертных подробностей о будущем контента. 
                                 </div>
                             </a>
                             <div {...stylex.props(VideoBlockStyles.play)} onClick={openModal}>

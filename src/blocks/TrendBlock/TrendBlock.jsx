@@ -471,7 +471,7 @@ export default function TrendBlock () {
             <div {...stylex.props(globalStyle.container)}>
                 <div {...stylex.props(TrendItemStyles.content)}>
                     <p {...stylex.props(TrendItemStyles.title)}>
-                        <span {...stylex.props(TrendItemStyles.dynamicColor(colors.title))} >«</span>Синхронизируйте музыку в сериалах и<span {...stylex.props(TrendItemStyles.dynamicColor(colors.title))} > выстраивайте связь вашего творчества</span> и имиджа в социальных сетях<span {...stylex.props(TrendItemStyles.dynamicColor(colors.title))} >»</span>
+                        <span {...stylex.props(TrendItemStyles.dynamicColor(colors.title))} >«</span>Выстраивайте <span {...stylex.props(TrendItemStyles.dynamicColor(colors.title))} >связь между творчеством и имиджем</span> в соцсетях и пробуйте попадать в саундтреки к сериалам<span {...stylex.props(TrendItemStyles.dynamicColor(colors.title))} >»</span>
                     </p>
                     <div {...stylex.props(TrendItemStyles.personLayout)}>
 
@@ -488,11 +488,11 @@ export default function TrendBlock () {
                         <div {...stylex.props(TrendItemStyles.data)}>
                             <p {...stylex.props(TrendItemStyles.data__trend)}>Музыка</p>
                             <div {...stylex.props(TrendItemStyles.data__grid)}>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>В 2023 неожиданным стал успех треков, которые звучали в сериалах и популярность фонк-ремиксов. Все еще наблюдается ностальгия по прошлым десятилетиям. Советую внимательно следить за происходящим не только в музыке, но и во всей медиа-сфере и использовать каждую возможность для продвижения, например, синхронизируя музыку в сериалах.</p>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Ваше творчество и имидж должны быть тесно связаны и отражены в социальных сетях. В условиях высокой конкуренции за внимание зрителей, важно развивать и выстраивать свои социальные сети. Если кто-то услышит и полюбит вашу музыку, он должен иметь возможность легко найти о вас информацию, как зритель, так и продюсер или редактор. Ваша музыкальная карьера — это не только искусство, но и стратегия, маркетинг и умение работать на рынке.</p>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>В 2023-м неожиданным стал успех фонк-ремиксов и треков, которые звучали в сериалах. Также всё ещё наблюдается ностальгия по прошлым десятилетиям. Советую внимательно следить за происходящим не только в музыке, но и во всей медиасфере, и использовать каждую возможность для продвижения — например, попадать в саундтреки сериалов и фильмов.</p>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Творчество и имидж должны быть тесно связаны и отражены в соцсетях — их особенно важно развивать при высокой конкуренции за внимание аудитории. Если кто-то из зрителей услышит и полюбит вашу музыку, ему должно быть легко найти вас, — то же касается продюсеров и редакторов. Музыкальная карьера — это не только искусство, но и стратегия, а ещё маркетинг и умение работать на рынке.</p>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
                 <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_MUSIC}/>
             </div>
@@ -518,11 +518,11 @@ export default function TrendBlock () {
                         <div {...stylex.props(TrendItemStyles.data)}>
                             <p {...stylex.props(TrendItemStyles.data__trend, TrendItemStyles.dynamicColor(colors.green))}>Подкасты</p>
                             <div {...stylex.props(TrendItemStyles.data__grid)}>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Мой любимый тренд&nbsp;— сложный контент: от&nbsp;журналистских расследований и&nbsp;насыщенных нарративов до тру-крайма. Не&nbsp;ограничивайте себя одним жанром и&nbsp;экспериментируйте.<br/><br/> Вторая тенденция&nbsp;— значимость коротких форматов. Используйте их&nbsp;как основной вид контента или для того, чтобы придать дополнительную ценность более объёмным материалам. </p>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Третья тенденция касается взаимодействия с аудиторией: важно выстраивать лояльные отношения с&nbsp;ней, даже если у нас нишевая тема. Каждый пользователь должен ощущать, что его ценят и&nbsp;поэтому регулярно делятся с&nbsp;ним эксклюзивным контентом.</p>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Мой любимый тренд — на сложные форматы: от журналистских расследований, нарративных подкастов и тру-крайма до аудиосериалов. Не ограничивайте себя рамками одного жанра и экспериментируйте.</p>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Форматы в медиа становятся короче — в подкастах тоже. Используйте короткие форматы как основной вид контента или для того, чтобы привлечь внимание к более объёмному материалу.</p>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
                 <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_PODCAST}/>
             </div>
@@ -561,7 +561,7 @@ export default function TrendBlock () {
             <div {...stylex.props(globalStyle.container)}>
                 <div {...stylex.props(TrendItemStyles.content)}>
                     <p {...stylex.props(TrendItemStyles.title)}>
-                        <span {...stylex.props(TrendItemStyles.dynamicColor(colors.purple))} >«</span>Изучите исследования, <span {...stylex.props(TrendItemStyles.dynamicColor(colors.purple))} >чтобы откалибровать взгляд,</span>  и&nbsp;сверяйтесь соnbsp;своими ощущениями<span {...stylex.props(TrendItemStyles.dynamicColor(colors.purple))} >»</span>
+                        <span {...stylex.props(TrendItemStyles.dynamicColor(colors.purple))} >«</span>Изучите исследования, <span {...stylex.props(TrendItemStyles.dynamicColor(colors.purple))} >чтобы откалибровать взгляд,</span>  и&nbsp;сверяйтесь со&nbsp;своими ощущениями<span {...stylex.props(TrendItemStyles.dynamicColor(colors.purple))} >»</span>
                     </p>
                     <div {...stylex.props(TrendItemStyles.personLayout, TrendItemStyles.dynamicLineColor(colors.purple))}>
 
@@ -591,7 +591,7 @@ export default function TrendBlock () {
             <div {...stylex.props(globalStyle.container)}>
                 <div {...stylex.props(TrendItemStyles.content)}>
                     <p {...stylex.props(TrendItemStyles.title)}>
-                        <span {...stylex.props(TrendItemStyles.dynamicColor(colors.yellow))} >«</span>Сторителлинг становится всё более популярным форматом для коммуникации брендов с потребителями <span {...stylex.props(TrendItemStyles.dynamicColor(colors.yellow))} >благодаря большой вовлечённости аудитории </span>и укрепления доверия к спикеру<span {...stylex.props(TrendItemStyles.dynamicColor(colors.yellow))} >»</span>
+                        <span {...stylex.props(TrendItemStyles.dynamicColor(colors.yellow))} >«</span>Вы сами, ваши эмоции, мысли, уникальная мимика и жесты — вот что составляет <span {...stylex.props(TrendItemStyles.dynamicColor(colors.yellow))} >вашу «фишку».</span> Не бойтесь делиться этим невидимым измерением вашего творчества<span {...stylex.props(TrendItemStyles.dynamicColor(colors.yellow))} >»</span>
                     </p>
                     <div {...stylex.props(TrendItemStyles.personLayout,  TrendItemStyles.dynamicLineColor(colors.yellow))}>
 
@@ -606,10 +606,10 @@ export default function TrendBlock () {
                     </div>
                     <div {...stylex.props(TrendItemStyles.dataLayout)}>
                         <div {...stylex.props(TrendItemStyles.data)}>
-                            <p {...stylex.props(TrendItemStyles.data__trend, TrendItemStyles.dynamicColor(colors.yellow))}>Сторителлинг и&nbsp;креатив</p>
+                            <p {...stylex.props(TrendItemStyles.data__trend, TrendItemStyles.dynamicColor(colors.yellow))}>Креативный сторителлинг</p>
                             <div {...stylex.props(TrendItemStyles.data__grid)}>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>В 2024 году важно создавать музыкальный контент, который соответствует современным трендам и технологиям, таким как виртуальная и дополненная реальность, стриминговые сервисы и социальные медиа. Однако, не забывайте о качестве и оригинальности вашего творчества, создавайте новое. </p>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Используйте новые звуковые и музыкальные инструменты, экспериментируйте с жанрами и стилями, но при этом оставайтесь верными своему уникальному звучанию. Будьте готовы к быстрым изменениям в индустрии и активно изучайте новые технологии и платформы для продвижения вашей музыки.</p>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>В нашем мире, где контент создаётся на каждом шагу, основная задача для автора — выделиться и быть заметным. Чтобы выжить в этой конкурентной среде, необходимы навыки сторителлинга. Как же удержать внимание читателей или зрителей? Существуют базовые техники: задать вопрос в начале и дать ответ только в конце, создавая тем самым ожидание; использовать интонацию как подтекст, усиливая её жестами и мимикой.</p>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Говорите не только текст, который написан, но и текст, который не написан — тогда у истории появится объём. Что делать молодым авторам и как найти свою «фишку»? Вы сами — это ваша «фишка», вы уникальны. Помните, что сильная история — это не просто слова на бумаге, но и ваши эмоции, ваши невысказанные мысли, которые придают рассказу глубину. Советуем не бояться делиться этим невидимым измерением вашего творчества.</p>
                             </div>
                         </div>
                     </div>                    

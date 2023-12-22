@@ -47,42 +47,58 @@ const styles = stylex.create({
         zIndex: "3",
         margin: "0",
         [DESKTOP_XL] : {
-            fontSize: "280px",
+            fontSize: "170px",
             fontStyle: "normal",
             fontWeight: "600",
-            lineHeight: "100%",
+            lineHeight: "187px",
             letterSpacing: "2.8px",
         },
         [DESKTOP_MD] : {
-            fontSize: "210px",
+            fontSize: "126px",
             fontStyle: "normal",
             fontWeight: "600",
-            lineHeight: "100%",
+            lineHeight: "138px",
             letterSpacing: "2.1px",
         },
         [DESKTOP_S] : {
-            fontSize: "150px",
+            fontSize: "88px",
             fontStyle: "normal",
             fontWeight: "600",
-            lineHeight: "110%",
+            lineHeight: "97px",
             letterSpacing: "1.5px",
         },
         [MOBILE_MD] : {
-            fontSize: "40px",
+            fontSize: "32px",
             fontStyle: "normal",
             fontWeight: "600",
-            lineHeight: "110%",
+            lineHeight: "36px",
             letterSpacing: "0.4px",
         }
     },
     colored : {
-        color: colors.title
+        color: colors.title,
+        [DESKTOP_XL] : {
+
+            paddingLeft: "430px",
+        },
+        [DESKTOP_MD] : {
+
+            paddingLeft: "320px",
+        },
+        [DESKTOP_S] : {
+
+            paddingLeft: "220px",
+        },
+        [MOBILE_MD] : {
+
+            paddingLeft: "0",
+        },
     },
     description: {
-        
+
         zIndex: "2",
         [DESKTOP_XL] : {
-            marginTop: "140px",
+            marginTop: "100px",
             paddingLeft: "430px",
         },
         [DESKTOP_MD] : {
@@ -102,7 +118,7 @@ const styles = stylex.create({
         color: colors.text,
         fontStyle: "normal",
         fontWeight: "500",
-        
+
         [DESKTOP_XL] : {
             fontSize: "24px",
             lineHeight: "150%",
@@ -117,7 +133,7 @@ const styles = stylex.create({
         },
         [MOBILE_MD] : {
             fontSize: "16px",
-            lineHeight: "150%",
+            lineHeight: "24px",
             // marginBottom: paddings.padding_s
         }
     },
@@ -125,7 +141,7 @@ const styles = stylex.create({
         margin: "0",
     },
     info: {
-        
+
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
 
@@ -193,61 +209,59 @@ const styles = stylex.create({
         zIndex: "999",
         position: "relative",
         margin: "0",
+        textTransform: "lowercase",
 
         
         [DESKTOP_XL] : {
-            paddingTop: "20px",
-            marginTop: "-25px",
-
+            paddingTop: "34px",
             fontSize: "24px",
             lineHeight: "150%",
         },
         [DESKTOP_MD] : {
             paddingTop: "16px",
-            marginTop: "-20px",
 
             fontSize: "18px",
             lineHeight: "150%",
         },
         [DESKTOP_S] : {
             paddingTop: "10px",
-            marginTop: "-14px",
 
             fontSize: "14px",
             lineHeight: "150%",
         },
         [MOBILE_MD]: {
             paddingTop: "10px",
-            marginTop: "-10px",
 
             fontSize: "16px",
             lineHeight: "150%",
+
+            display: "inline-block"
+
         }
     },
     bg: {
         position: "absolute",
-        transform: "rotate(29.708deg)",
         zIndex: "1",
 
         [DESKTOP_XL] : {
-            top: "500px",
-            right: "-775px",
+            top: "240px",
+            right: "-80px",
 
         },
         [DESKTOP_MD] : {
-            top: "330px",
-            right: "-700px",
-            width: "1350px"
+            top: "140px",
+            right: "-80px",
+            // width: "1350px"
         },
         [DESKTOP_S] : {
-            top: "290px",
-            right: "-320px",
-            width: "800px"
+            top: "120px",
+            right: "-80px",
+            width: "450px"
         },
         [MOBILE_MD] : {
-            top: "25%",
+            top: "5px",
             left: "45%",
-            width: "95%"
+            width: "75%"
         },
     }
 })
@@ -262,48 +276,49 @@ export default function KeyVisualBlock (props) {
             <div {...stylex.props(globalStyle.container)}>
                 <div {...stylex.props(styles.content)}>
                     <h1 {...stylex.props(styles.heading)}>
-                        Тренды <span {...stylex.props(styles.colored)}>2024</span>
+                    Тренды в&nbsp;контенте&nbsp;—
                     </h1>
+                    <span {...stylex.props(styles.heading, styles.colored)}>2024</span>
                     <div {...stylex.props(styles.description)}>
                         <div {...stylex.props(styles.subtitle)}>
                             <p {...stylex.props(styles.subtitle_text)}>
-                            Не следует, однако, забывать о том, что сложившаяся структура организации создаёт предпосылки качественно новых шагов для позиций, занимаемых участниками в отношении поставленных задач?
+                            Советы для создателей контента от&nbsp;профи
                             </p>
                         </div>
                         <div {...stylex.props(styles.info)}>
                             <div>
                                 <p {...stylex.props(styles.info__title)}>
-                                    18+
+                                    +25%
                                 </p>
                                 <p {...stylex.props(styles.info__description)}>
-                                    Прародителем текста-рыбы является известный «Lorem Ipsum» — латинский текст, ноги которого растут аж из 45 года до нашей эры.
+                                    Просмотров видео за год
                                 </p>
                             </div>
        
                             <div>
                                 <p {...stylex.props(styles.info__title)}>
-                                    76%
+                                    +27%
                                 </p>
                                 <p {...stylex.props(styles.info__description)}>
-                                    Прародителем текста-рыбы является известный «Lorem Ipsum» — латинский текст, ноги которого растут аж из 45 года до нашей эры.
+                                    Историй за год
                                 </p>
                             </div>
                   
                             <div>
                                 <p {...stylex.props(styles.info__title)}>
-                                    400+
+                                    +60%
                                 </p>
                                 <p {...stylex.props(styles.info__description)}>
-                                    Прародителем текста-рыбы является известный «Lorem Ipsum» — латинский текст, ноги которого растут аж из 45 года до нашей эры.
+                                    Реакций у клипов в ленте
                                 </p>
                             </div>
                
                             <div>
                                 <p {...stylex.props(styles.info__title)}>
-                                    8+
+                                    +56%
                                 </p>
                                 <p {...stylex.props(styles.info__description)}>
-                                    Прародителем текста-рыбы является известный «Lorem Ipsum» — латинский текст, ноги которого растут аж из 45 года до нашей эры.
+                                    Пользователей, которые благодарят авторов с VK Donut
                                 </p>
                             </div>
                         </div>
