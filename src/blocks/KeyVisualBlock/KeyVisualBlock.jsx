@@ -118,26 +118,37 @@ const styles = stylex.create({
         color: colors.text,
         fontStyle: "normal",
         fontWeight: "500",
+        display: "flex",
+        flexDirection: "column",
+        
 
         [DESKTOP_XL] : {
-            fontSize: "24px",
+            fontSize: "30px",
             lineHeight: "150%",
+            gap: "30px",
         },
         [DESKTOP_MD] : {
-            fontSize: "18px",
+            fontSize: "24px",
             lineHeight: "150%",
+            gap: "23px",
         },
         [DESKTOP_S] : {
-            fontSize: "14px",
+            fontSize: "18px",
             lineHeight: "150%",
+            gap: "14px",
         },
         [MOBILE_MD] : {
             fontSize: "16px",
             lineHeight: "24px",
+            gap: "16px",
             // marginBottom: paddings.padding_s
         }
     },
     subtitle_text: {
+        margin: "0",
+    },
+    subtitle_text_list :{
+        padding: "0 0 0 20px",
         margin: "0",
     },
     info: {
@@ -282,8 +293,15 @@ export default function KeyVisualBlock (props) {
                     <div {...stylex.props(styles.description)}>
                         <div {...stylex.props(styles.subtitle)}>
                             <p {...stylex.props(styles.subtitle_text)}>
-                            Советы для создателей контента от&nbsp;профи
+                                Советы для создателей контента от профи.<br/>
+                                Как создавать контент, который покорит аудиторию?
+                                <br/>
                             </p>
+                            <ul {...stylex.props(styles.subtitle_text_list)}>
+                                <li>6 главных тем</li>
+                                <li>6 экспертов</li>
+                                <li>6 конкретных советов</li>
+                            </ul>
                         </div>
                         <div {...stylex.props(styles.info)}>
                             <div>
@@ -303,7 +321,7 @@ export default function KeyVisualBlock (props) {
                                     Историй за год
                                 </p>
                             </div>
-                  
+{/*                   
                             <div>
                                 <p {...stylex.props(styles.info__title)}>
                                     +60%
@@ -311,7 +329,7 @@ export default function KeyVisualBlock (props) {
                                 <p {...stylex.props(styles.info__description)}>
                                     Реакций у клипов в ленте
                                 </p>
-                            </div>
+                            </div> */}
                
                             <div>
                                 <p {...stylex.props(styles.info__title)}>

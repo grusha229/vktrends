@@ -11,7 +11,7 @@ export default function ModalBlock ({isOpen, onRequestClose}) {
 
             >
                 <iframe 
-                    src="https://vk.com/video_ext.php?oid=-86529522&id=456242449&hd=1" 
+                    src="https://vk.com/video_ext.php?oid=-76477496&id=456240451&hd=1" 
                     width="100%"
                     height="100%" 
                     allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" 

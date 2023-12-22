@@ -403,7 +403,7 @@ export const VideoBlock = () => {
                     <div {...stylex.props(VideoBlockStyles.content)}>
                         <h2 {...stylex.props(VideoBlockStyles.title)}>Следите за&nbsp;трендами, чтобы быть впереди. А&nbsp;найти аудиторию для&nbsp;своего творчества <span {...stylex.props(VideoBlockStyles.dynamicColor(colors.title))}>можно&nbsp;ВКонтакте.</span></h2>
                         <div {...stylex.props(VideoBlockStyles.video, VideoBlockStyles.backgroundImageURL(BG_image))}>
-                            <a href={"https://vk.com/video"} {...stylex.props(VideoBlockStyles.link)}>
+                            <a href={"https://vk.com/video-76477496_456240451"} {...stylex.props(VideoBlockStyles.link)}>
                                 <div {...stylex.props(VideoBlockStyles.link_title)}>
                                     Смотрите видео&nbsp;–
                                 </div>

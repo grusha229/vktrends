@@ -443,11 +443,11 @@ const TrendItemStyles = stylex.create({
         lineHeight: "140%",
         [DESKTOP_XL] : {
             gap: "60px",
-            fontSize: "24px",
+            fontSize: "26px",
         },
         [DESKTOP_MD] : {
             gap: "40px",
-            fontSize: "18px",
+            fontSize: "20px",
         },
         [DESKTOP_S] : {
             gap: "30px",
@@ -455,7 +455,8 @@ const TrendItemStyles = stylex.create({
         },
         [MOBILE_MD] : {
             gridTemplateColumns: "1fr",
-            gap: "32px"
+            gap: "32px",
+            fontSize: "16px",
         }
     },
     data__grid_text: {
@@ -467,64 +468,33 @@ export default function TrendBlock () {
 
     return(
         <>
-        <div id={`first-trend`} {...stylex.props(TrendItemStyles.block)}>
+        <div id={`sixth-trend`} {...stylex.props(TrendItemStyles.block)}>
             <div {...stylex.props(globalStyle.container)}>
                 <div {...stylex.props(TrendItemStyles.content)}>
                     <p {...stylex.props(TrendItemStyles.title)}>
-                        <span {...stylex.props(TrendItemStyles.dynamicColor(colors.title))} >«</span>Выстраивайте <span {...stylex.props(TrendItemStyles.dynamicColor(colors.title))} >связь между творчеством и имиджем</span> в соцсетях и пробуйте попадать в саундтреки к сериалам<span {...stylex.props(TrendItemStyles.dynamicColor(colors.title))} >»</span>
+                        <span {...stylex.props(TrendItemStyles.dynamicColor(colors.lightBlue))} >«</span>Загляните <span {...stylex.props(TrendItemStyles.dynamicColor(colors.lightBlue))} >в&nbsp;мекку всей мемной индустрии России&nbsp;</span>— раздел видео ВКонтакте <span {...stylex.props(TrendItemStyles.dynamicColor(colors.lightBlue))} >»</span>
                     </p>
-                    <div {...stylex.props(TrendItemStyles.personLayout)}>
+                    <div {...stylex.props(TrendItemStyles.personLayout,  TrendItemStyles.dynamicLineColor(colors.lightBlue))}>
 
                         <div {...stylex.props(TrendItemStyles.person)}>
-                            <img {...stylex.props(TrendItemStyles.person__photo, TrendItemStyles.person__photo_music)} src={SPEAKER_MUSIC}/>
+                            <img {...stylex.props(TrendItemStyles.person__photo, TrendItemStyles.person__photo_video)} src={SPEAKER_VIDEOS}/>
                             <div {...stylex.props(TrendItemStyles.person__info)}>
-                                <p {...stylex.props(TrendItemStyles.person__info_name)} >Сергей Мудрик, главный редактор VK&nbsp;Музыки</p>
-                                <p {...stylex.props(TrendItemStyles.person__info_post)} >Открывает миру музыкантов c 2017 года</p>
+                                <p {...stylex.props(TrendItemStyles.person__info_name)} >Василий Дидляков, старший продюсер талантов в VK Клипах</p>
+                                <p {...stylex.props(TrendItemStyles.person__info_post)} >А&nbsp;ещё блогер, музыкант и&nbsp;мемолог со стажем</p>
                             </div>
                         </div>
-
-                    </div>
-                    <div {...stylex.props(TrendItemStyles.dataLayout, TrendItemStyles.dynamicLineColor(colors.title))}>
-                        <div {...stylex.props(TrendItemStyles.data)}>
-                            <p {...stylex.props(TrendItemStyles.data__trend)}>Музыка</p>
-                            <div {...stylex.props(TrendItemStyles.data__grid)}>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>В 2023-м неожиданным стал успех фонк-ремиксов и треков, которые звучали в сериалах. Также всё ещё наблюдается ностальгия по прошлым десятилетиям. Советую внимательно следить за происходящим не только в музыке, но и во всей медиасфере, и использовать каждую возможность для продвижения — например, попадать в саундтреки сериалов и фильмов.</p>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Творчество и имидж должны быть тесно связаны и отражены в соцсетях — их особенно важно развивать при высокой конкуренции за внимание аудитории. Если кто-то из зрителей услышит и полюбит вашу музыку, ему должно быть легко найти вас, — то же касается продюсеров и редакторов. Музыкальная карьера — это не только искусство, но и стратегия, а ещё маркетинг и умение работать на рынке.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_MUSIC}/>
-            </div>
-        </div>
-        <div id={`second-trend`} {...stylex.props(TrendItemStyles.block)}>
-            <div {...stylex.props(globalStyle.container)}>
-                <div {...stylex.props(TrendItemStyles.content)}>
-                    <p {...stylex.props(TrendItemStyles.title)}>
-                        <span {...stylex.props(TrendItemStyles.dynamicColor(colors.green))} >«</span>Работайте <span {...stylex.props(TrendItemStyles.dynamicColor(colors.green))} >на&nbsp;лояльность аудитории,</span> даже если она небольшая: каждый слушатель должен ощущать, что вы&nbsp;его цените<span {...stylex.props(TrendItemStyles.dynamicColor(colors.green))} >»</span>
-                    </p>
-                    <div {...stylex.props(TrendItemStyles.personLayout, TrendItemStyles.dynamicLineColor(colors.green))}>
-
-                        <div {...stylex.props(TrendItemStyles.person)}>
-                            <img {...stylex.props(TrendItemStyles.person__photo, TrendItemStyles.person__photo_podcast)} src={SPEAKER_PODCAST}/>
-                            <div {...stylex.props(TrendItemStyles.person__info)}>
-                                <p {...stylex.props(TrendItemStyles.person__info_name)} >Анна Ковалёва, соосновательница контент-бюро «Шторм»</p>
-                                <p {...stylex.props(TrendItemStyles.person__info_post)} >За&nbsp;год студия «Шторм» запустила 14&nbsp;подкастов, которые послушали 1,5&nbsp;млн&nbsp;раз</p>
-                            </div>
-                        </div>
-
                     </div>
                     <div {...stylex.props(TrendItemStyles.dataLayout)}>
                         <div {...stylex.props(TrendItemStyles.data)}>
-                            <p {...stylex.props(TrendItemStyles.data__trend, TrendItemStyles.dynamicColor(colors.green))}>Подкасты</p>
+                            <p {...stylex.props(TrendItemStyles.data__trend, TrendItemStyles.dynamicColor(colors.lightBlue))}>Короткие видео</p>
                             <div {...stylex.props(TrendItemStyles.data__grid)}>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Мой любимый тренд — на сложные форматы: от журналистских расследований, нарративных подкастов и тру-крайма до аудиосериалов. Не ограничивайте себя рамками одного жанра и экспериментируйте.</p>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Форматы в медиа становятся короче — в подкастах тоже. Используйте короткие форматы как основной вид контента или для того, чтобы привлечь внимание к более объёмному материалу.</p>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Ищите вдохновение в&nbsp;ретромемах из&nbsp;2000-х и&nbsp;интегрируйте их&nbsp;в&nbsp;свой контент. Если хотите стать автором тренда, приглашаю вас заглянуть в&nbsp;историческую мекку всей российской мемной индустрии&nbsp;— раздел видео ВКонтакте.</p>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Пробуйте себя в&nbsp;разных амплуа и&nbsp;публикуйте короткие вертикальные видео&nbsp;— это самый востребованный тип контента сегодня».</p>
                             </div>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
-                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_PODCAST}/>
+                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_VIDEO}/>
             </div>
         </div>
         <div id={`third-trend`} {...stylex.props(TrendItemStyles.block)}>
@@ -557,6 +527,96 @@ export default function TrendBlock () {
                 <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_NEURO}/>
             </div>
         </div>
+        <div id={`second-trend`} {...stylex.props(TrendItemStyles.block)}>
+            <div {...stylex.props(globalStyle.container)}>
+                <div {...stylex.props(TrendItemStyles.content)}>
+                    <p {...stylex.props(TrendItemStyles.title)}>
+                        <span {...stylex.props(TrendItemStyles.dynamicColor(colors.green))} >«</span>Работайте <span {...stylex.props(TrendItemStyles.dynamicColor(colors.green))} >на&nbsp;лояльность аудитории,</span> даже если она небольшая: каждый слушатель должен ощущать, что вы&nbsp;его цените<span {...stylex.props(TrendItemStyles.dynamicColor(colors.green))} >»</span>
+                    </p>
+                    <div {...stylex.props(TrendItemStyles.personLayout, TrendItemStyles.dynamicLineColor(colors.green))}>
+
+                        <div {...stylex.props(TrendItemStyles.person)}>
+                            <img {...stylex.props(TrendItemStyles.person__photo, TrendItemStyles.person__photo_podcast)} src={SPEAKER_PODCAST}/>
+                            <div {...stylex.props(TrendItemStyles.person__info)}>
+                                <p {...stylex.props(TrendItemStyles.person__info_name)} >Анна Ковалёва, соосновательница контент-бюро «Шторм»</p>
+                                <p {...stylex.props(TrendItemStyles.person__info_post)} >За&nbsp;год студия «Шторм» запустила 14&nbsp;подкастов, которые послушали 1,5&nbsp;млн&nbsp;раз</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div {...stylex.props(TrendItemStyles.dataLayout)}>
+                        <div {...stylex.props(TrendItemStyles.data)}>
+                            <p {...stylex.props(TrendItemStyles.data__trend, TrendItemStyles.dynamicColor(colors.green))}>Подкасты</p>
+                            <div {...stylex.props(TrendItemStyles.data__grid)}>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Мой любимый тренд — на сложные форматы: от журналистских расследований, нарративных подкастов и тру-крайма до аудиосериалов. Не ограничивайте себя рамками одного жанра и экспериментируйте.</p>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Форматы в медиа становятся короче — в подкастах тоже. Используйте короткие форматы как основной вид контента или для того, чтобы привлечь внимание к более объёмному материалу.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_PODCAST}/>
+            </div>
+        </div>
+        <div id={`fifth-trend`} {...stylex.props(TrendItemStyles.block)}>
+            <div {...stylex.props(globalStyle.container)}>
+                <div {...stylex.props(TrendItemStyles.content)}>
+                    <p {...stylex.props(TrendItemStyles.title)}>
+                        <span {...stylex.props(TrendItemStyles.dynamicColor(colors.yellow))} >«</span>Вы сами, ваши эмоции, мысли, уникальная мимика и жесты — вот что составляет <span {...stylex.props(TrendItemStyles.dynamicColor(colors.yellow))} >вашу «фишку».</span> Не бойтесь делиться этим невидимым измерением вашего творчества<span {...stylex.props(TrendItemStyles.dynamicColor(colors.yellow))} >»</span>
+                    </p>
+                    <div {...stylex.props(TrendItemStyles.personLayout,  TrendItemStyles.dynamicLineColor(colors.yellow))}>
+
+                        <div {...stylex.props(TrendItemStyles.person)}>
+                            <img {...stylex.props(TrendItemStyles.person__photo, TrendItemStyles.person__photo_story)} src={SPEAKER_STORYTELLING}/>
+                            <div {...stylex.props(TrendItemStyles.person__info)}>
+                                <p {...stylex.props(TrendItemStyles.person__info_name)} >Никита и Кирилл, творческое объединение «11»</p>
+                                <p {...stylex.props(TrendItemStyles.person__info_post)} >Набрали 50 тысяч подписчиков за 2 месяца</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div {...stylex.props(TrendItemStyles.dataLayout)}>
+                        <div {...stylex.props(TrendItemStyles.data)}>
+                            <p {...stylex.props(TrendItemStyles.data__trend, TrendItemStyles.dynamicColor(colors.yellow))}>Cторителлинг</p>
+                            <div {...stylex.props(TrendItemStyles.data__grid)}>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>В мире, где контент создаётся на каждом шагу, основная задача автора — выделиться. Чтобы выжить в конкурентной среде, нужны навыки сторителлинга. Если хотите удержать внимание читателей и зрителей, пригодятся базовые техники: можно задать вопрос в начале и дать ответ только в конце, использовать интонацию как подтекст. </p>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Выражайте не только то, что написано на бумаге, но и то, что скрыто между строк: тогда у истории появится объём. Сильный сюжет — это эмоции, невысказанные мысли. Ваша фишка — это вы сами. Не бойтесь делиться тем, что скрыто внутри.</p>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_STORY}/>
+            </div>
+        </div>
+        <div id={`first-trend`} {...stylex.props(TrendItemStyles.block)}>
+            <div {...stylex.props(globalStyle.container)}>
+                <div {...stylex.props(TrendItemStyles.content)}>
+                    <p {...stylex.props(TrendItemStyles.title)}>
+                        <span {...stylex.props(TrendItemStyles.dynamicColor(colors.title))} >«</span>Выстраивайте <span {...stylex.props(TrendItemStyles.dynamicColor(colors.title))} >связь между творчеством и имиджем</span> в соцсетях и пробуйте попадать в саундтреки к сериалам<span {...stylex.props(TrendItemStyles.dynamicColor(colors.title))} >»</span>
+                    </p>
+                    <div {...stylex.props(TrendItemStyles.personLayout)}>
+
+                        <div {...stylex.props(TrendItemStyles.person)}>
+                            <img {...stylex.props(TrendItemStyles.person__photo, TrendItemStyles.person__photo_music)} src={SPEAKER_MUSIC}/>
+                            <div {...stylex.props(TrendItemStyles.person__info)}>
+                                <p {...stylex.props(TrendItemStyles.person__info_name)} >Сергей Мудрик, главный редактор VK&nbsp;Музыки</p>
+                                <p {...stylex.props(TrendItemStyles.person__info_post)} >Открывает миру музыкантов c 2017 года</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div {...stylex.props(TrendItemStyles.dataLayout, TrendItemStyles.dynamicLineColor(colors.title))}>
+                        <div {...stylex.props(TrendItemStyles.data)}>
+                            <p {...stylex.props(TrendItemStyles.data__trend)}>Музыка</p>
+                            <div {...stylex.props(TrendItemStyles.data__grid)}>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>В 2023-м неожиданным стал успех фонк-ремиксов и треков, которые звучали в сериалах. Также всё ещё наблюдается ностальгия по прошлым десятилетиям. Советую внимательно следить за происходящим не только в музыке, но и во всей медиасфере, и использовать каждую возможность для продвижения — например, попадать в саундтреки сериалов и фильмов.</p>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Творчество и имидж должны быть тесно связаны и отражены в соцсетях — их особенно важно развивать при высокой конкуренции за внимание аудитории. Если кто-то из зрителей услышит и полюбит вашу музыку, ему должно быть легко найти вас, — то же касается продюсеров и редакторов. Музыкальная карьера — это не только искусство, но и стратегия, а ещё маркетинг и умение работать на рынке.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_MUSIC}/>
+            </div>
+        </div>
         <div id={`fourth-trend`} {...stylex.props(TrendItemStyles.block)}>
             <div {...stylex.props(globalStyle.container)}>
                 <div {...stylex.props(TrendItemStyles.content)}>
@@ -585,65 +645,6 @@ export default function TrendBlock () {
                     </div>                    
                 </div>
                 <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_THREAD}/>
-            </div>
-        </div>
-        <div id={`fifth-trend`} {...stylex.props(TrendItemStyles.block)}>
-            <div {...stylex.props(globalStyle.container)}>
-                <div {...stylex.props(TrendItemStyles.content)}>
-                    <p {...stylex.props(TrendItemStyles.title)}>
-                        <span {...stylex.props(TrendItemStyles.dynamicColor(colors.yellow))} >«</span>Вы сами, ваши эмоции, мысли, уникальная мимика и жесты — вот что составляет <span {...stylex.props(TrendItemStyles.dynamicColor(colors.yellow))} >вашу «фишку».</span> Не бойтесь делиться этим невидимым измерением вашего творчества<span {...stylex.props(TrendItemStyles.dynamicColor(colors.yellow))} >»</span>
-                    </p>
-                    <div {...stylex.props(TrendItemStyles.personLayout,  TrendItemStyles.dynamicLineColor(colors.yellow))}>
-
-                        <div {...stylex.props(TrendItemStyles.person)}>
-                            <img {...stylex.props(TrendItemStyles.person__photo, TrendItemStyles.person__photo_story)} src={SPEAKER_STORYTELLING}/>
-                            <div {...stylex.props(TrendItemStyles.person__info)}>
-                                <p {...stylex.props(TrendItemStyles.person__info_name)} >Никита и Кирилл, творческое объединение «11»</p>
-                                <p {...stylex.props(TrendItemStyles.person__info_post)} >Набрали 50 тысяч подписчиков за 2 месяца</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div {...stylex.props(TrendItemStyles.dataLayout)}>
-                        <div {...stylex.props(TrendItemStyles.data)}>
-                            <p {...stylex.props(TrendItemStyles.data__trend, TrendItemStyles.dynamicColor(colors.yellow))}>Креативный сторителлинг</p>
-                            <div {...stylex.props(TrendItemStyles.data__grid)}>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>В нашем мире, где контент создаётся на каждом шагу, основная задача для автора — выделиться и быть заметным. Чтобы выжить в этой конкурентной среде, необходимы навыки сторителлинга. Как же удержать внимание читателей или зрителей? Существуют базовые техники: задать вопрос в начале и дать ответ только в конце, создавая тем самым ожидание; использовать интонацию как подтекст, усиливая её жестами и мимикой.</p>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Говорите не только текст, который написан, но и текст, который не написан — тогда у истории появится объём. Что делать молодым авторам и как найти свою «фишку»? Вы сами — это ваша «фишка», вы уникальны. Помните, что сильная история — это не просто слова на бумаге, но и ваши эмоции, ваши невысказанные мысли, которые придают рассказу глубину. Советуем не бояться делиться этим невидимым измерением вашего творчества.</p>
-                            </div>
-                        </div>
-                    </div>                    
-                </div>
-                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_STORY}/>
-            </div>
-        </div>
-        <div id={`sixth-trend`} {...stylex.props(TrendItemStyles.block)}>
-            <div {...stylex.props(globalStyle.container)}>
-                <div {...stylex.props(TrendItemStyles.content)}>
-                    <p {...stylex.props(TrendItemStyles.title)}>
-                        <span {...stylex.props(TrendItemStyles.dynamicColor(colors.lightBlue))} >«</span>Загляните <span {...stylex.props(TrendItemStyles.dynamicColor(colors.lightBlue))} >в&nbsp;мекку всей мемной индустрии России&nbsp;</span>— раздел видео ВКонтакте <span {...stylex.props(TrendItemStyles.dynamicColor(colors.lightBlue))} >»</span>
-                    </p>
-                    <div {...stylex.props(TrendItemStyles.personLayout,  TrendItemStyles.dynamicLineColor(colors.lightBlue))}>
-
-                        <div {...stylex.props(TrendItemStyles.person)}>
-                            <img {...stylex.props(TrendItemStyles.person__photo, TrendItemStyles.person__photo_video)} src={SPEAKER_VIDEOS}/>
-                            <div {...stylex.props(TrendItemStyles.person__info)}>
-                                <p {...stylex.props(TrendItemStyles.person__info_name)} >Василий Дидляков, старший продюсер талантов в VK Клипах</p>
-                                <p {...stylex.props(TrendItemStyles.person__info_post)} >А&nbsp;ещё блогер, музыкант и&nbsp;мемолог со стажем</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div {...stylex.props(TrendItemStyles.dataLayout)}>
-                        <div {...stylex.props(TrendItemStyles.data)}>
-                            <p {...stylex.props(TrendItemStyles.data__trend, TrendItemStyles.dynamicColor(colors.lightBlue))}>Короткие видео</p>
-                            <div {...stylex.props(TrendItemStyles.data__grid)}>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Ищите вдохновение в&nbsp;ретромемах из&nbsp;2000-х и&nbsp;интегрируйте их&nbsp;в&nbsp;свой контент. Если хотите стать автором тренда, приглашаю вас заглянуть в&nbsp;историческую мекку всей российской мемной индустрии&nbsp;— раздел видео ВКонтакте.</p>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Пробуйте себя в&nbsp;разных амплуа и&nbsp;публикуйте короткие вертикальные видео&nbsp;— это самый востребованный тип контента сегодня».</p>
-                            </div>
-                        </div>
-                    </div>                    
-                </div>
-                <img {...stylex.props(TrendItemStyles.bg)} src={SVG_PATTERN_VIDEO}/>
             </div>
         </div>
         </>
