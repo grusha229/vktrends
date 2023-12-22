@@ -17,8 +17,8 @@ export default defineConfig({
     createHtmlPlugin({
       inject: {
         data: {
-          title: "Тренды 2024",
-          desc: "Итоги 2023 года",
+          title: "Тренды в контенте — 2024",
+          desc: "Как создавать контент, который покорит аудиторию? Советы для авторов от профи",
           origin,
           snippetImage: path.join(origin, "img/1200_snippet.png"),
           vkSnippetImage: path.join(origin, "img/1530_snippet.png"),
