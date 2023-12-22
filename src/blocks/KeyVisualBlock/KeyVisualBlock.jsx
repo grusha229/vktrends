@@ -293,7 +293,7 @@ export default function KeyVisualBlock (props) {
                     <div {...stylex.props(styles.description)}>
                         <div {...stylex.props(styles.subtitle)}>
                             <p {...stylex.props(styles.subtitle_text)}>
-                                Советы для создателей контента от профи.<br/>
+                                Советы для авторов от&nbsp;профи<br/>
                                 Как создавать контент, который покорит аудиторию?
                                 <br/>
                             </p>

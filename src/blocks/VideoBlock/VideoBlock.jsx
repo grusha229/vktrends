@@ -408,7 +408,7 @@ export const VideoBlock = () => {
                                     Смотрите видео&nbsp;–
                                 </div>
                                 <div {...stylex.props(VideoBlockStyles.link_descr)}>
-                                    это ещё больше экспертных подробностей о будущем контента. 
+                                    это ещё больше экспертных подробностей о будущем контента
                                 </div>
                             </a>
                             <div {...stylex.props(VideoBlockStyles.play)} onClick={openModal}>
