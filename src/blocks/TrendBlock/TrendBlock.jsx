@@ -489,7 +489,7 @@ export default function TrendBlock () {
                             <p {...stylex.props(TrendItemStyles.data__trend, TrendItemStyles.dynamicColor(colors.lightBlue))}>Короткие видео</p>
                             <div {...stylex.props(TrendItemStyles.data__grid)}>
                                 <p {...stylex.props(TrendItemStyles.data__grid_text)}>Ищите вдохновение в&nbsp;ретромемах из&nbsp;2000-х и&nbsp;интегрируйте их&nbsp;в&nbsp;свой контент. Если хотите стать автором тренда, приглашаю вас заглянуть в&nbsp;историческую мекку всей российской мемной индустрии&nbsp;— раздел видео ВКонтакте.</p>
-                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Пробуйте себя в&nbsp;разных амплуа и&nbsp;публикуйте короткие вертикальные видео&nbsp;— это самый востребованный тип контента сегодня».</p>
+                                <p {...stylex.props(TrendItemStyles.data__grid_text)}>Пробуйте себя в&nbsp;разных амплуа и&nbsp;публикуйте короткие вертикальные видео&nbsp;— это самый востребованный тип контента сегодня»</p>
                             </div>
                         </div>
                     </div>                    
@@ -568,8 +568,8 @@ export default function TrendBlock () {
                         <div {...stylex.props(TrendItemStyles.person)}>
                             <img {...stylex.props(TrendItemStyles.person__photo, TrendItemStyles.person__photo_story)} src={SPEAKER_STORYTELLING}/>
                             <div {...stylex.props(TrendItemStyles.person__info)}>
-                                <p {...stylex.props(TrendItemStyles.person__info_name)} >Никита и Кирилл, творческое объединение «11»</p>
-                                <p {...stylex.props(TrendItemStyles.person__info_post)} >Набрали 50 тысяч подписчиков за 2 месяца</p>
+                                <p {...stylex.props(TrendItemStyles.person__info_name)} >Никита и&nbsp;Кирилл, творческое объединение «Одиннадцать»</p>
+                                <p {...stylex.props(TrendItemStyles.person__info_post)} >Умеют интересно рассказывать буквально обо всём: от&nbsp;радиаторов до&nbsp;произведений искусства</p>
                             </div>
                         </div>
 
